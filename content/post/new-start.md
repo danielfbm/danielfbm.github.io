@@ -12,7 +12,7 @@ cardheaderimage: /images/default.jpg
 cardthumbimage: /images/default.jpg
 categories:
 - post
-date: 2016-06-16T22:43:32+08:00
+date: 2016-06-19T18:00:00+08:00
 description: First post with Hugo and how I built this blog
 tags:  
 - blog
@@ -294,13 +294,16 @@ deploy:
 	steps:
       - install-packages:
           packages: git ssh-client
-      - lukevivier/gh-pages@0.2.1:
+      - halberom/gh-pages@0.2.3:
           token: $GIT_TOKEN
-          domain: hugo-wercker.ig.nore.me
+          domain: example.com #optional
+          branch: master #option branch to deploy after building. Will override files
           basedir: public
 ```
 
-Change the domain variable to yout github.io subdomain or any other domain that you own. The ``basedir`` here tell Wercker to publish the built files to this subfolder. Now head to Github and lets create a token to be able to deploy. Follow [this steps](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) to create it, and select only **repo** in the scopes section.
+**Note: If you are publishing into the ``useraccount.github.io`` repository, then you should push to some other branch, like ``dev`` and change the wercker.yml adding `branch: master`. If you are using hugo for a project page, then the HTML should be published to the ``gh-pages`` branch**
+
+Change the domain variable to a domain that you own or remove the key to use the github.io one. The ``basedir`` here tell Wercker to publish the built files to this subfolder. Now head to Github and lets create a token to be able to deploy. Follow [this steps](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) to create it, and select only **repo** in the scopes section.
 
 After generating the key, go back to the Wercker page and tap on the settings button
 
@@ -322,7 +325,9 @@ Add the pipeline to your current workflow:
 
 ![Wercker add pipeline to the workflow](/images/wercker-update-workflow.png)
 
-Commit and push and your project should be built automatically. From now on, everytime you push changes to **master**, Wercker will take care of building and deploying everything for you.
+Commit and push and your project should be built automatically. From now on, everytime you push changes to **master** for a project page, or any other branch for a **username.github.io** page, Wercker will take care of building and deploying everything for you.
+
+**Note: If you are publishing into the *useraccount.github.io* repository, then you should push to some other branch, like *dev* and change the wercker.yml adding `branch: master`. If you are using hugo for a project page, then the HTML should be published to the ``gh-pages`` branch**
 
 ### Next steps
 
