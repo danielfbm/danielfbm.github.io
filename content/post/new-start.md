@@ -262,7 +262,21 @@ Initialize your blog folder with ```git init``` if you haven't done that. Head t
 
 After signup, choose to **Create your first application** or the **Create/Application** menu. Select the account and the repository you want to setup.
 
-In the next step select the option **wercker will checkout the code without using and SSH key** and click on **Next step**. 
+In the next step select the option **wercker will checkout the code without using and SSH key** and click on **Next step**. Click **Finish** and we can start creating our build script
+
+Back to your project root folder, create a ``wercker.yml`` file using the following template, but remember to change part of the content if necessary:
+
+```yaml
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.16"
+        theme: hugo_theme_robust
+        flags: --buildDrafts=true
+```
+
+Commit and push. You should see the result in the page after a few minutes
 
 [typora]: https://www.typora.io/
 [madown]: http://macdown.uranusjr.com/
