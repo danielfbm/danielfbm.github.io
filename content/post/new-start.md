@@ -276,7 +276,67 @@ build:
         flags: --buildDrafts=true
 ```
 
-Commit and push. You should see the result in the page after a few minutes
+Commit and push. You should see the result in the page very quckly, and give it one or two minutes to complete your build:
+
+![Blog building](/images/blog-build.png)
+
+There are a few more steps in order to fully publish the project. Change your ```wercker.yml``` build script to:
+
+```yaml
+box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: "0.16"
+        theme: hugo_theme_robust
+        flags: --buildDrafts=true
+deploy:
+	steps:
+      - install-packages:
+          packages: git ssh-client
+      - lukevivier/gh-pages@0.2.1:
+          token: $GIT_TOKEN
+          domain: hugo-wercker.ig.nore.me
+          basedir: public
+```
+
+Change the domain variable to yout github.io subdomain or any other domain that you own. The ``basedir`` here tell Wercker to publish the built files to this subfolder. Now head to Github and lets create a token to be able to deploy. Follow [this steps](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) to create it, and select only **repo** in the scopes section.
+
+After generating the key, go back to the Wercker page and tap on the settings button
+
+![Wercker app settings](/images/blog-wercker-settings.png)
+
+Tap on **Environment Variables** and add your github token to the **GIT_TOKEN** key. You can select **Protected**.
+
+![Wercker environment variables](/images/wercker-env.png)
+
+The first time we pushed our project Wercker already created our ``build`` pipeline, so now we need to change it a little bit in order to deploy. Still in the **Settings** page click on **Workflows**. Create a new Pipeline by click on **Add new pipeline** in the box below
+
+![Wercker new pipeline](/images/wercker-workflows.png)
+
+Then add as follows:
+
+![Wercker new pipeline](/images/wercker-new-pipeline.png)
+
+Add the pipeline to your current workflow:
+
+![Wercker add pipeline to the workflow](/images/wercker-update-workflow.png)
+
+Commit and push and your project should be built automatically. From now on, everytime you push changes to **master**, Wercker will take care of building and deploying everything for you.
+
+### Next steps
+
+For my next post I will introduce a sample project which will be split in a series of posts actually. We will build a **Tasks** application. In this series we will learn a few things including:
+
+- A Simple Microservices Architecture: Building for Scale;
+- How to build a Task backend service using MongoDB as datastore;
+- How to build a API Gateway for our Microservices App;
+- How to build a Web UI using Angular.js and Angular Material;
+- How to optmize our development routine using Docker and other tools;
+- How to apply some basic Continuous Integration in a different way;
+- How to setup and deploy automatically all of our services independently;
+
+Note: I might change the content and subjects, and also I am open for any suggestions. If you would like to more about some topic, please leave a comment below.
 
 [typora]: https://www.typora.io/
 [madown]: http://macdown.uranusjr.com/
