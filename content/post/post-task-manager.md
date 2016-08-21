@@ -441,7 +441,15 @@ docker ps
 docker exec -it tasks_tasks_1 bash
 ```
 
-You will notice that you now are currently inside the container but still you can run your client file from within ``python client.py`` 
+You will notice that you now are currently inside the container but still you can run your client file from within using 
+
+`````bash
+python client.py
+`````
+
+This project's code is available in this github repo
+
+[https://github.com/danielfbm/tasks-py](https://github.com/danielfbm/tasks-py)
 
 ### Summary
 
