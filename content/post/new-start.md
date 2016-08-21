@@ -50,7 +50,7 @@ My first struggle before I even started was to find a nice platform to host the 
 
 - They are not *geeky* enough. I had some experience with helping friends build their websites/blogs using those CMS tools, and the general experience is not that pleasant.
 
-My second option was to start from scratch: Pick a language, like Python, a framework, like Django or flask, and code everything myself. I took some time to consider and in the end I decided to use something different, something I had not tried before. With some googling I discovered [Jekyll][jekyll-site], [Github Pages][github-pages], and I immediately started to find ways to get it working and to start developing.
+My second option was to start from scratch: Pick a language, like Python, a framework, like Django or flask, and code everything myself. I took some time to consider and in the end I decided to use something different, something I had not tried before. With some googling I discovered [Jekyll][jekyll-page], [Github Pages][github-pages], and I immediately started to find ways to get it working and to start developing.
 
 I basically had a good start, but after a incident, I lost my computer before I could commit and push to Github :(
 
@@ -258,7 +258,7 @@ Take some time to explore more and more the functionalities of Hugo and it's con
 
 Go ahead and [setup your Github account](https://github.com/join?source=header-home) if you don't have one. After that, head to [Github Pages][github-pages] and follow the steps to setup your repository to keep the website files.
 
-Initialize your blog folder with ```git init``` if you haven't done that. Head to the [Wercker][werker-page] website and signup with your Github account.
+Initialize your blog folder with ```git init``` if you haven't done that. Head to the [Wercker][wercker-page] website and signup with your Github account.
 
 After signup, choose to **Create your first application** or the **Create/Application** menu. Select the account and the repository you want to setup.
 
@@ -333,8 +333,8 @@ Commit and push and your project should be built automatically. From now on, eve
 
 For my next post I will introduce a sample project which will be split in a series of posts actually. We will build a **Tasks** application. In this series we will learn a few things including:
 
-- A Simple Microservices Architecture: Building for Scale;
-- How to build a Task backend service using MongoDB as datastore;
+- [A Simple Microservices Architecture: Building for Scale;](/post/post-task-manager/)
+- [How to build a Task backend service using MongoDB as datastore;](/post/post-task-manager/)
 - How to build a API Gateway for our Microservices App;
 - How to build a Web UI using Angular.js and Angular Material;
 - How to optmize our development routine using Docker and other tools;
@@ -356,3 +356,4 @@ Note: I might change the content and subjects, and also I am open for any sugges
 [dragon-boat-festival]: http://www.chinahighlights.com/festivals/dragon-boat-festival.htm
 [golang]: https://golang.org/
 [homebrew]: http://brew.sh/
+[macdown]: http://macdown.uranusjr.com/
