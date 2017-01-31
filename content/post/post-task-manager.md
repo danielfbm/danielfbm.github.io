@@ -11,17 +11,31 @@ cardbackground: '#263238'
 cardheaderimage: /images/default.jpg
 cardthumbimage: /images/default.jpg
 categories:
-- post
+- Tutorials
+- Microservices
+- Docker
 date: 2016-08-21T20:51:42+08:00
 description: Task example app architecture
+keywords:
+- architecture
+- microservices
+- tasks app
+- thrift
+- docker
+- tutorial
+- python
 tags:
 - architecture
 - microservices
 - tasks app
-- example app
 - docker
-- docker swarm
+- thirft
+- Dockerfile
+- example
+- tutorial
+- python
 title: Tasks app and microservices architecture
+comments: true
 ---
 
 

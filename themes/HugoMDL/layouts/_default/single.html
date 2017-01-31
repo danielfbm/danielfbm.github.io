@@ -19,7 +19,7 @@
             {{ .Content }}
         </div>
         <div class="mdl-color-text--primary-contrast mdl-card__supporting-text comments"> 
-            <a href={{ .Params.author.website }}>aaaa{{ .Params.author.name }}aaaa</a>
+            <a href={{ .Params.author.website }}>{{ .Params.author.name }}</a>
             <p>{{ .Params.author.description }}</p>
             
             {{ partial "disqus.html" }}

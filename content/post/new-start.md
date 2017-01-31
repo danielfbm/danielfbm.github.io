@@ -11,16 +11,23 @@ cardbackground: '#263238'
 cardheaderimage: /images/default.jpg
 cardthumbimage: /images/default.jpg
 categories:
-- post
+- Tutorials
 date: 2016-06-19T18:00:00+08:00
 description: First post with Hugo and how I built this blog
+keywords:
+- blog
+- hugo
+- github.io
+- wercker
+- static site
 tags:  
 - blog
 - hugo
-- how
-- creation
-- start
+- github.io
+- wercker
+- static site
 title: How I setup this blog
+comments: true
 ---
 
 ### Introduction
@@ -333,8 +340,8 @@ Commit and push and your project should be built automatically. From now on, eve
 
 For my next post I will introduce a sample project which will be split in a series of posts actually. We will build a **Tasks** application. In this series we will learn a few things including:
 
-- [A Simple Microservices Architecture: Building for Scale;](/post/post-task-manager/)
-- [How to build a Task backend service using MongoDB as datastore;](/post/post-task-manager/)
+- [A Simple Microservices Architecture: Building for Scale;](/2016/08/tasks-app-and-microservices-architecture/)
+- [How to build a Task backend service using MongoDB as datastore;](/2016/08/tasks-app-and-microservices-architecture/)
 - How to build a API Gateway for our Microservices App;
 - How to build a Web UI using Angular.js and Angular Material;
 - How to optmize our development routine using Docker and other tools;
