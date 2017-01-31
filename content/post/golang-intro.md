@@ -17,8 +17,13 @@ tags:
 - go
 - programming languages
 - introduction
+- go setup
 title: Golang introduction
 draft: true
+coverImage: http://res.cloudinary.com/dxucxgkq3/image/upload/c_scale,h_200/v1485882698/gopher_head_kww38r.png
+coverCaption: "Gopher"
+coverMeta: out
+coverSize: partial
 ---
 
 This is for those interested in the **go** programming language. This is my take as an introduction on this amazing language
@@ -120,7 +125,90 @@ With all the tools installed your VS Code will be ready for rock. By default a f
 
 Together with formating the Extension also provides auto-building and linting on save, make it very quick and simple to see all the possible errors directly inside the IDE and simplifying the coding experience.
 
+There are more functionalities supported by this Extension. Visit its [code repo](https://github.com/Microsoft/vscode-go) for more info.
 
+#### Syntax
+
+For those familiar with the C family of programming languages will feel very comfortable writting **go** code. First, most of it is very similar, and those annoying details, like adding a semicolon to the end of every code line,  are different. Lets go directly to the point. Nothing better than a **Hello World** for a quick glance:
+
+```go
+package main // a package name is expected in every go file as the first line
+
+import "fmt" // importing the fmt standard library
+
+// for the main package a main function is necessary
+// just like C, this is the entry point for our program
+func main() {
+  // Print one line to stdout
+  fmt.Println("Hello, world")
+}
+```
+
+#### Basics
+
+
+
+##### Variables
+
+There a multiple ways to declare variables in **go**:
+
+```go
+package main
+
+import (
+    "fmt"
+)
+
+func main() {
+  	// single variable. Variable type comes after the name
+    var i int = 0
+  
+  	// multiple variables, single line, j == 1, k == 2
+    var j, k int = 1, 2
+
+  	// the same as the line above but with implicit type
+  	// note the colon
+    z, x, c := 3, 4, 5
+
+  	// multi-line declaration
+    var (
+      one string
+      two string
+      three = "three"
+    )
+}
+```
+
+By default each simple type has a "zero-value", which are:
+
+- `0` for `int`
+- `""` for `string`
+- `false` for `bool`
+- `nil` for any `pointer`
+
+#### Structs
+
+#### Collections
+
+#### Flow-control
+
+#### Defer
+
+#### Error handling
+
+#### Concurrency, the cool stuff
+
+#### Further reading
+
+For a more complete understanding of the **go** language, syntax, and usage please refer to the following sources:
+
+- [Effective go](https://golang.org/doc/effective_go.html) for tips on writing clear, idiomatic Go code.
+- [An introduction to programming in go](https://www.golang-book.com/books/intro) for a free online e-book.
+- [A full list of books about go](https://github.com/dariubs/GoBooks)
+
+
+
+For the example codes in this post please refer to [this code repo](https://github.com/danielfbm/go-intro).
 
 [golang]: https://golang.org/
 [godownload]: https://golang.org/dl/
