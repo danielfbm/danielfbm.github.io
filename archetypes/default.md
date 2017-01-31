@@ -7,16 +7,15 @@ categories:
 tags:
     - "meta"
     - "test"
-cardthumbimage: "/images/default.jpg" #optional: default solid color if unset
-cardheaderimage: "/images/default.jpg" #optional: default solid color if unset
-cardbackground: "#263238" #optional: card background color; only shows when no image specified
-#cardtitlecolor: "#fafafa" #optional: can be changed to make text visible over card image
-"author":
-    name: "Firstname Lastname"
-    description: "Writer of stuff"
-    website: "http://example.com/"
-    email: "firstname@example.com"
-    twitter: "https://twitter.com/"
-    github: "https://github.com/"
-    image: "/images/avatar-64x64.png"
+cardbackground: '#263238'
+cardheaderimage: /images/default.jpg
+cardthumbimage: /images/default.jpg
+author:
+  description: danielfbm
+  email: danielfbm@gmail.com
+  github: https://github.com/danielfbm
+  image: /images/avatar-64x64.png
+  name: danielfbm
+  twitter: https://twitter.com/danielfbm
+  website: http://danielfbm.github.io/
 ---
