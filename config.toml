@@ -55,6 +55,12 @@ canonifyurls = true
   url = "/"
 [[menu.main]]
   weight = 1
+  identifier = "golang"
+  name = "Golang"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-code\"></i>"
+  url = "/categories/golang"
+[[menu.main]]
+  weight = 1
   identifier = "categories"
   name = "Categories"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
