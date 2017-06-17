@@ -1,12 +1,14 @@
 ---
-title: "First"
-description: "first post with Hugo website engine"
+title: "Golang Design Patterns"
+description: "Discussion about Design Patterns in Golang"
 date: "2015-08-18"
 categories:
-    - "post"
+    - "golang"
+    - "design patterns"
 tags:
-    - "meta"
-    - "test"
+    - "golang"
+    - "design patterns"
+    - "singleton"
 cardbackground: '#263238'
 cardheaderimage: /images/default.jpg
 cardthumbimage: /images/default.jpg
@@ -21,4 +23,8 @@ author:
 ---
 
 
-This is my post.
+## Contents
+
+ - Singleton
+ - Factory
+ - 
