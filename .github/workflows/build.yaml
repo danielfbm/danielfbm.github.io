@@ -14,7 +14,7 @@ jobs:
     - name: Build with docker
       run: |
         docker run -v ${{ github.workspace }}:/code \
-        -w /code
+        -w /code \
         ubuntu:latest \
         /bin/bash -c "apt-get update && apt-get install hugo && hugo -d public --cleanDestinationDir --config config.toml && ls -lha"
         # apt-get update
