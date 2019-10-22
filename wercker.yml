@@ -1,10 +1,10 @@
 box: debian
 build:
   steps:
-    - arjen/hugo-build@1.14.1:
-        version: "0.17"
+    - arjen/hugo-build:
+        version: "0.58.3"
         config: config.toml
-        theme: hugo-tranquilpeak-themecustom
+        theme: hugo-tranquilpeak-theme
         flags: --buildDrafts=false
 deploy:
   steps:
