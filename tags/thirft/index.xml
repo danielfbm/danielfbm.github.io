@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>thirft on danielfbm&#39;s blog</title>
+    <link>https://danielfbm.github.io/tags/thirft/</link>
+    <description>Recent content in thirft on danielfbm&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 21 Aug 2016 20:51:42 +0800</lastBuildDate>
+    
+	<atom:link href="https://danielfbm.github.io/tags/thirft/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tasks app and microservices architecture</title>
+      <link>https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/</guid>
+      <description>In this post we will explore some basic concepts while working with a microservices architecture in a distributed application. If you are not very familiar with microservices and the motivation behind it, you should take a look at this series of posts from NGINX that gives a great introduction on the subject.
+All the concepts are quite simple and although the autor had sugested a few things to get started I will take you through the construction of a simple microservices app that you could deploy anywhere.</description>
+    </item>
+    
+  </channel>
+</rss>

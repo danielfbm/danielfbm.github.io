@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on danielfbm&#39;s blog</title>
+    <link>https://danielfbm.github.io/tags/</link>
+    <description>Recent content in Tags on danielfbm&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Dec 2019 15:52:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://danielfbm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>kubernetes</title>
+      <link>https://danielfbm.github.io/tags/kubernetes/</link>
+      <pubDate>Sun, 29 Dec 2019 15:52:19 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sonobuoy</title>
+      <link>https://danielfbm.github.io/tags/sonobuoy/</link>
+      <pubDate>Sun, 29 Dec 2019 15:52:19 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/sonobuoy/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>testing</title>
+      <link>https://danielfbm.github.io/tags/testing/</link>
+      <pubDate>Sun, 29 Dec 2019 15:52:19 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/testing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go</title>
+      <link>https://danielfbm.github.io/tags/go/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>go setup</title>
+      <link>https://danielfbm.github.io/tags/go-setup/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/go-setup/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>golang</title>
+      <link>https://danielfbm.github.io/tags/golang/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>introduction</title>
+      <link>https://danielfbm.github.io/tags/introduction/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/introduction/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming languages</title>
+      <link>https://danielfbm.github.io/tags/programming-languages/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/programming-languages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>architecture</title>
+      <link>https://danielfbm.github.io/tags/architecture/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/architecture/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>docker</title>
+      <link>https://danielfbm.github.io/tags/docker/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Dockerfile</title>
+      <link>https://danielfbm.github.io/tags/dockerfile/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/dockerfile/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>example</title>
+      <link>https://danielfbm.github.io/tags/example/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/example/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>microservices</title>
+      <link>https://danielfbm.github.io/tags/microservices/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://danielfbm.github.io/tags/python/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tasks app</title>
+      <link>https://danielfbm.github.io/tags/tasks-app/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/tasks-app/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>thirft</title>
+      <link>https://danielfbm.github.io/tags/thirft/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/thirft/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tutorial</title>
+      <link>https://danielfbm.github.io/tags/tutorial/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/tutorial/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>blog</title>
+      <link>https://danielfbm.github.io/tags/blog/</link>
+      <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/blog/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>github.io</title>
+      <link>https://danielfbm.github.io/tags/github.io/</link>
+      <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/github.io/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>hugo</title>
+      <link>https://danielfbm.github.io/tags/hugo/</link>
+      <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/hugo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>static site</title>
+      <link>https://danielfbm.github.io/tags/static-site/</link>
+      <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/static-site/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>wercker</title>
+      <link>https://danielfbm.github.io/tags/wercker/</link>
+      <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/wercker/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

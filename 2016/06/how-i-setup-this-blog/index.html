@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="danielfbm">
+<meta name="keywords" content="blog, hugo, github.io, wercker, static site, development, kubernetes, docker, golang, devops">
+<meta name="description" content="First post with Hugo and how I built this blog">
+
+
+<meta property="og:description" content="First post with Hugo and how I built this blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="How I setup this blog">
+<meta name="twitter:title" content="How I setup this blog">
+<meta property="og:url" content="https://danielfbm.github.io/2016/06/how-i-setup-this-blog/">
+<meta property="twitter:url" content="https://danielfbm.github.io/2016/06/how-i-setup-this-blog/">
+<meta property="og:site_name" content="danielfbm&#39;s blog">
+<meta property="og:description" content="First post with Hugo and how I built this blog">
+<meta name="twitter:description" content="First post with Hugo and how I built this blog">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2016-06-19T18:00:00">
+  
+  
+    <meta property="article:modified_time" content="2016-06-19T18:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="Tutorials">
+    
+  
+  
+    
+      <meta property="article:tag" content="blog">
+    
+      <meta property="article:tag" content="hugo">
+    
+      <meta property="article:tag" content="github.io">
+    
+      <meta property="article:tag" content="wercker">
+    
+      <meta property="article:tag" content="static site">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@danielfbm">
+
+
+  <meta name="twitter:creator" content="@danielfbm">
+
+
+
+
+
+
+
+
+
+
+  <meta property="og:image" content="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png">
+  <meta property="twitter:image" content="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png">
+
+
+    <title>How I setup this blog</title>
+
+    <link rel="icon" href="https://danielfbm.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://danielfbm.github.io/2016/06/how-i-setup-this-blog/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://danielfbm.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-79136377-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://danielfbm.github.io/">danielfbm&#39;s blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://danielfbm.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://danielfbm.github.io/#about">
+          <img class="sidebar-profile-picture" src="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">danielfbm</h4>
+        
+          <h5 class="sidebar-profile-bio">technology enthusiast and loves coding, kubernetes, containers, games, and DevOps.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/categories/golang">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Golang</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/danielfbm" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+
+      <div id="main" data-behavior="4"
+        class="
+               hasCoverMetaIn
+               ">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      How I setup this blog
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2016-06-19T18:00:00&#43;08:00">
+        
+  June 19, 2016
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://danielfbm.github.io/categories/tutorials">Tutorials</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<h3 id="introduction">Introduction</h3>
+
+<p>Well, let me first introduce myself. My name is Daniel, I am rather happy Brazilian currently living in Beijing, China.</p>
+
+<p>I am technology fan, and from childhood I started to become very interested in computers and other eletronic gadgets. My working experience is mostly in Software Development. In the beginning it was mostly focused on the .NET platform (from 2004 until 2011) on the Windows environment, later on I started to learn Unix systems, software testing. The programming l use in my daily work are mostly Python, Node.js, and recently I started to learn Go as well.</p>
+
+<p>Currently I am working daily with Docker as well, so I will also publish the things I learn about this <strong>awesome</strong> tool and how to make development easier.</p>
+
+<p>I created this blog with the intent to share things as I learn them, and nothing better to start as sharing on how I built this blog and what are the things I am planning to write in the next few weeks</p>
+
+<h3 id="how-i-built-this-blog">How I built this blog</h3>
+
+<p>In the past, I had many different blogs but I never really was interested in sharing anything in particular. Now that I am more mature, almost 30, and more involved with interesting things, I believe it is the right time to start a new blog.</p>
+
+<h4 id="tl-dr">TL; DR</h4>
+
+<p><a href="gohugo.io" title="gohugo.io">Hugo</a>, <a href="https://en.wikipedia.org/wiki/Markdown" title="Wiki on Markdown">Markdown</a> and <a href="https://pages.github.com/" title="GitHub Pages">GitHub Pages</a> are amazing tools to get started fast, and build your own blog without any maintainance cost. Deploy <a href="https://gohugo.io/tutorials/automated-deployments/">online building</a> with <a href="http://wercker.com/" title="Wercker">Wercker</a> and we are done.</p>
+
+<h4 id="engine">Engine</h4>
+
+<p>My first struggle before I even started was to find a nice platform to host the blog. I could use other stuff available like Blogger, Wordpress, and the likes, but there are a few problems:</p>
+
+<ul>
+<li><p>Most of these platforms are not available in China due to the Great Firewall of China</p></li>
+
+<li><p>They are not <em>geeky</em> enough. I had some experience with helping friends build their websites/blogs using those CMS tools, and the general experience is not that pleasant.</p></li>
+</ul>
+
+<p>My second option was to start from scratch: Pick a language, like Python, a framework, like Django or flask, and code everything myself. I took some time to consider and in the end I decided to use something different, something I had not tried before. With some googling I discovered <a href="https://jekyllrb.com/">Jekyll</a>, <a href="https://pages.github.com/" title="GitHub Pages">Github Pages</a>, and I immediately started to find ways to get it working and to start developing.</p>
+
+<p>I basically had a good start, but after a incident, I lost my computer before I could commit and push to Github :(</p>
+
+<p>A few more things happened, and I finally have a computer again to play with but a busy project at my current job kept me busy enough. We just had some <a href="http://www.chinahighlights.com/festivals/dragon-boat-festival.htm">holidays</a> here in China the last few days, so I decided to get started all over again. While looking for Jenkyll and some other material, I met <a href="gohugo.io" title="gohugo.io">Hugo</a></p>
+
+<p>It was a good match. First because its performance seemed very impressive, all comments around the tool are good, and mostly because it achieves the same that <a href="https://jekyllrb.com/">Jekyll</a> achieves, but it was developed with <a href="https://golang.org/">Go</a>, which I am very intested.</p>
+
+<p>With one line of code and I downloaded the cli with <a href="http://brew.sh/">Homebrew</a> as you can check <a href="http://gohugo.io/overview/installing/">here</a>.</p>
+
+<pre><code class="language-sh">brew update &amp;&amp; brew install hugo
+</code></pre>
+
+<p>You can also check their <a href="https://gohugo.io/overview/quickstart/">Quickstart</a> to get a few more details on the process.</p>
+
+<p>After that I just started a new Hugo site with <code>huge new site blog</code> in a folder, and the basic structure was already there:  <em><code>v0.16</code> at the time of writting</em></p>
+
+<pre><code class="language-sh">$ tree
+.
+├── archetypes
+├── config.toml
+├── content
+├── data
+├── layouts
+├── static
+└── themes
+
+6 directories, 1 file
+</code></pre>
+
+<p>All the folders are empty, but the basic structure was already there.</p>
+
+<p>Now lets get some theme to start of. I currently use <a href="http://themes.gohugo.io/hugo-mdl/">HugoMDL</a>, but honestly this is not what I really desire, so I might change this later on. <a href="http://themes.gohugo.io/">Here</a> you find some nice options to get you started.</p>
+
+<p>I will pick <a href="http://themes.gohugo.io/robust/">Robust</a> to get started. Head to your blog folder using the Terminal, and type the following:</p>
+
+<pre><code class="language-sh">git clone https://github.com/dim0627/hugo_theme_robust themes/hugo_theme_robust
+</code></pre>
+
+<p>This will download the theme into the <code>themes</code> folder inside the blog folder.</p>
+
+<p>Now, to avoid having the <code>.git</code> files of the theme mixed with your own blog files you can do the following:</p>
+
+<pre><code class="language-sh">rm -rf themes/hugo_theme_robust/.git
+</code></pre>
+
+<p>This will basicaly remove all the git files referencing the theme. You could also fork the theme repo and customize and then push it to Github.</p>
+
+<p>It is very important to create a <code>config.toml</code>. Some themes will provide a template for you, others will give you an example in the themes Github repo. This is the case with Robust. Open the <a href="https://github.com/dim0627/hugo_theme_robust">Robust repo</a> and check the example</p>
+
+<pre><code class="language-yaml">baseurl = &quot;http://hugo.spf13.com/&quot;
+title = &quot;Hugo Themes&quot;
+author = &quot;Steve Francia&quot;
+copyright = &quot;Copyright (c) 2008 - 2014, Steve Francia; all rights reserved.&quot;
+canonifyurls = true
+paginate = 3
+
+[params]
+  disqusShortname = &quot;your disqus id.&quot; # optional
+</code></pre>
+
+<p>Replace all the data with your own and save it as <code>config.toml</code> in your blog&rsquo;s root folder.</p>
+
+<p>The example configuration is missing just one important detail: The theme we are using. Change the configuration file to the following:</p>
+
+<pre><code class="language-toml">baseurl = &quot;http://hugo.spf13.com/&quot;
+title = &quot;My Blog&quot;
+author = &quot;The author&quot;
+copyright = &quot;Copyright (c) 2016, The author; all rights reserved.&quot;
+canonifyurls = true
+paginate = 3
+theme = &quot;hugo_theme_robust&quot;
+
+[params]
+  disqusShortname = &quot;your disqus id.&quot; # optional
+</code></pre>
+
+<p>As you can see I already changed a few things and added the <code>theme = &quot;hugo_theme_robust&quot;</code>. If you chose another theme just remember to set the <code>theme</code> as the theme&rsquo;s folder name and you are good.</p>
+
+<p>You can check your website/blog by typing in your terminal:</p>
+
+<pre><code class="language-sh">hugo server
+</code></pre>
+
+<p>You can specify the port you want to use, and there are other nice stuff you can use with the <code>hugo server</code> command, so check the options with <code>hugo server --help</code></p>
+
+<p>Navigate to <code>localhost:1313</code> in your browser and you should see something like this:</p>
+
+<p><img src="https://danielfbm.github.io/images/blog-empty.png" alt="Empty Blog" /></p>
+
+<p>Now, before we create our first post, let&rsquo;s explore how Hugo works with content. I highly suggest that you take some time to read through <a href="http://gohugo.io/content/organization/">the documentation for the content part</a> at least.</p>
+
+<p>In summary, you can create a few folders in the <code>content</code> folder to split your website&rsquo;s content in different sections. Those sections will be used in the <strong>URL</strong> to find the content. Some themes will <strong>list</strong> the posts inside a folder if accessing the folder name in the URL, others will just give you a 404 error. In this sense <strong>Robust</strong> seems to do a good job. So with a folder structure like the one below inside the <code>content</code> folder:</p>
+
+<pre><code class="language-sh">$ tree
+.
+├── blog
+│   └── new.md
+└── test.md
+
+1 directory, 2 files
+</code></pre>
+
+<p>You should get the following urls to see each one:</p>
+
+<pre><code>- baseurl/blog/new
+- baseurl/test
+</code></pre>
+
+<p>Before we start, notice that the <code>archetypes</code> folder is really important and will save you a lot of time. Our current folder is empty, and our theme doesn&rsquo;t even have one to start. From the Robust github page let&rsquo;s see  their example:</p>
+
+<pre><code class="language-markdown">+++
+title = &quot;Getting Started with Hugo&quot;
+description = &quot;&quot;
+tags = [
+    &quot;go&quot;,
+    &quot;golang&quot;,
+    &quot;hugo&quot;,
+    &quot;development&quot;,
+]
+date = &quot;2014-04-02&quot;
+categories = [
+    &quot;Development&quot;,
+    &quot;golang&quot;,
+]
+
+image = &quot;image.jpg&quot; # optional
+toc = false # optional.
++++
+
+Contents here
+</code></pre>
+
+<p>Now lets create an <code>archetype</code> for this example. Create a file <code>archetypes/default.md</code> just changing a little bit the content:</p>
+
+<pre><code class="language-markdown">+++
+title = &quot;New post&quot;
+description = &quot;&quot;
+tags = [
+    &quot;tag1&quot;,
+    &quot;tag2&quot;,
+]
+date = &quot;2014-04-02&quot;
+categories = [
+    &quot;defaultcategory&quot;,
+    &quot;category1&quot;
+]
+draft = true
+image = &quot;image.png&quot; # optional
+toc = false # optional
++++
+
+Contents here
+</code></pre>
+
+<p>Head back to the terminal and type to following to create a post:</p>
+
+<pre><code class="language-sh">hugo new post.md
+</code></pre>
+
+<p>This will create a new file <code>contents/post.md</code> and if you run your server now you will not be able to see it. I added a <code>draft = true</code> flag to the archetype, and Hugo will only build the file once you set this flag to <code>false</code>. If you want to preview your draft, you can use the flag <code>--buildDrafts</code> with the server command.</p>
+
+<p>Now open your favorite text editor or markdown editor and edit the <code>contents/post.md</code> file. You should see something like this:</p>
+
+<pre><code class="language-markdown">+++
+categories = [&quot;defaultcategory&quot;, &quot;category1&quot;]
+date = &quot;2016-06-19T12:22:46+08:00&quot;
+description = &quot;&quot;
+draft = true
+image = &quot;image.png&quot;
+tags = [&quot;tag1&quot;, &quot;tag2&quot;]
+title = &quot;post&quot;
+toc = false
+
++++
+
+Contents here
+</code></pre>
+
+<p>I use two markdown editors that I like a lot, one is <a href="https://www.typora.io/">Typora</a> which is a WYSIWYG editor (OSX and Windows), the other one is <a href="http://macdown.uranusjr.com/">MacDown</a>, (OSX). Both are great, and if you are just starting with markdown, I would recommend you to use <a href="http://macdown.uranusjr.com/">MacDown</a>. It&rsquo;s help file is all written in Markdown so you can have a good grasp on how it works.</p>
+
+<p>Edit the contents as you like and once you are ready just change the draft flag to <code>false</code> and you should be able to see your blog post.</p>
+
+<p>I downloaded an image from <a href="https://commons.wikimedia.org/wiki/Typewriter">Wikimedia Commons</a> and saved in the folder <code>static/images/image.png</code> and the <code>image.png</code> in your post.md file will display it as a header.</p>
+
+<p>Take some time to explore more and more the functionalities of Hugo and it&rsquo;s content management, and once we are ready, it is time to deploy to Github Pages</p>
+
+<h3 id="deploying-to-github-pages">Deploying to Github Pages</h3>
+
+<p>Go ahead and <a href="https://github.com/join?source=header-home">setup your Github account</a> if you don&rsquo;t have one. After that, head to <a href="https://pages.github.com/" title="GitHub Pages">Github Pages</a> and follow the steps to setup your repository to keep the website files.</p>
+
+<p>Initialize your blog folder with <code>git init</code> if you haven&rsquo;t done that. Head to the <a href="http://wercker.com/" title="Wercker">Wercker</a> website and signup with your Github account.</p>
+
+<p>After signup, choose to <strong>Create your first application</strong> or the <strong>Create/Application</strong> menu. Select the account and the repository you want to setup.</p>
+
+<p>In the next step select the option <strong>wercker will checkout the code without using and SSH key</strong> and click on <strong>Next step</strong>. Click <strong>Finish</strong> and we can start creating our build script</p>
+
+<p>Back to your project root folder, create a <code>wercker.yml</code> file using the following template, but remember to change part of the content if necessary:</p>
+
+<pre><code class="language-yaml">box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: &quot;0.16&quot;
+        theme: hugo_theme_robust
+        flags: --buildDrafts=true
+</code></pre>
+
+<p>Commit and push. You should see the result in the page very quckly, and give it one or two minutes to complete your build:</p>
+
+<p><img src="https://danielfbm.github.io/images/blog-build.png" alt="Blog building" /></p>
+
+<p>There are a few more steps in order to fully publish the project. Change your <code>wercker.yml</code> build script to:</p>
+
+<pre><code class="language-yaml">box: debian
+build:
+  steps:
+    - arjen/hugo-build:
+        version: &quot;0.16&quot;
+        theme: hugo_theme_robust
+        flags: --buildDrafts=true
+deploy:
+	steps:
+      - install-packages:
+          packages: git ssh-client
+      - halberom/gh-pages@0.2.3:
+          token: $GIT_TOKEN
+          domain: example.com #optional
+          branch: master #option branch to deploy after building. Will override files
+          basedir: public
+</code></pre>
+
+<p><strong>Note: If you are publishing into the <code>useraccount.github.io</code> repository, then you should push to some other branch, like <code>dev</code> and change the wercker.yml adding <code>branch: master</code>. If you are using hugo for a project page, then the HTML should be published to the <code>gh-pages</code> branch</strong></p>
+
+<p>Change the domain variable to a domain that you own or remove the key to use the github.io one. The <code>basedir</code> here tell Wercker to publish the built files to this subfolder. Now head to Github and lets create a token to be able to deploy. Follow <a href="https://help.github.com/articles/creating-an-access-token-for-command-line-use/">this steps</a> to create it, and select only <strong>repo</strong> in the scopes section.</p>
+
+<p>After generating the key, go back to the Wercker page and tap on the settings button</p>
+
+<p><img src="https://danielfbm.github.io/images/blog-wercker-settings.png" alt="Wercker app settings" /></p>
+
+<p>Tap on <strong>Environment Variables</strong> and add your github token to the <strong>GIT_TOKEN</strong> key. You can select <strong>Protected</strong>.</p>
+
+<p><img src="https://danielfbm.github.io/images/wercker-env.png" alt="Wercker environment variables" /></p>
+
+<p>The first time we pushed our project Wercker already created our <code>build</code> pipeline, so now we need to change it a little bit in order to deploy. Still in the <strong>Settings</strong> page click on <strong>Workflows</strong>. Create a new Pipeline by click on <strong>Add new pipeline</strong> in the box below</p>
+
+<p><img src="https://danielfbm.github.io/images/wercker-workflows.png" alt="Wercker new pipeline" /></p>
+
+<p>Then add as follows:</p>
+
+<p><img src="https://danielfbm.github.io/images/wercker-new-pipeline.png" alt="Wercker new pipeline" /></p>
+
+<p>Add the pipeline to your current workflow:</p>
+
+<p><img src="https://danielfbm.github.io/images/wercker-update-workflow.png" alt="Wercker add pipeline to the workflow" /></p>
+
+<p>Commit and push and your project should be built automatically. From now on, everytime you push changes to <strong>master</strong> for a project page, or any other branch for a <strong>username.github.io</strong> page, Wercker will take care of building and deploying everything for you.</p>
+
+<p><strong>Note: If you are publishing into the <em>useraccount.github.io</em> repository, then you should push to some other branch, like <em>dev</em> and change the wercker.yml adding <code>branch: master</code>. If you are using hugo for a project page, then the HTML should be published to the <code>gh-pages</code> branch</strong></p>
+
+<h3 id="next-steps">Next steps</h3>
+
+<p>For my next post I will introduce a sample project which will be split in a series of posts actually. We will build a <strong>Tasks</strong> application. In this series we will learn a few things including:</p>
+
+<ul>
+<li><a href="https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/">A Simple Microservices Architecture: Building for Scale;</a></li>
+<li><a href="https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/">How to build a Task backend service using MongoDB as datastore;</a></li>
+<li>How to build a API Gateway for our Microservices App;</li>
+<li>How to build a Web UI using Angular.js and Angular Material;</li>
+<li>How to optmize our development routine using Docker and other tools;</li>
+<li>How to apply some basic Continuous Integration in a different way;</li>
+<li>How to setup and deploy automatically all of our services independently;</li>
+</ul>
+
+<p>Note: I might change the content and subjects, and also I am open for any suggestions. If you would like to more about some topic, please leave a comment below.</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/blog/">blog</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/hugo/">hugo</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/github.io/">github.io</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/wercker/">wercker</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/static-site/">static site</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/" data-tooltip="Tasks app and microservices architecture">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 danielfbm. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/" data-tooltip="Tasks app and microservices architecture">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--disabled">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">danielfbm</h4>
+    
+      <div id="about-card-bio">technology enthusiast and loves coding, kubernetes, containers, games, and DevOps.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Beijing, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://danielfbm.github.io/images/background.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://danielfbm.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/danielfbm.github.io\/2016\/06\/how-i-setup-this-blog\/';
+          
+            this.page.identifier = '\/2016\/06\/how-i-setup-this-blog\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'danielfbm';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on danielfbm&#39;s blog</title>
+    <link>https://danielfbm.github.io/categories/</link>
+    <description>Recent content in Categories on danielfbm&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Tue, 31 Jan 2017 23:00:00 +0800</lastBuildDate>
+    
+	<atom:link href="https://danielfbm.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>golang</title>
+      <link>https://danielfbm.github.io/categories/golang/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>programming languages</title>
+      <link>https://danielfbm.github.io/categories/programming-languages/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/categories/programming-languages/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>https://danielfbm.github.io/categories/docker/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/categories/docker/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Microservices</title>
+      <link>https://danielfbm.github.io/categories/microservices/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/categories/microservices/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Tutorials</title>
+      <link>https://danielfbm.github.io/categories/tutorials/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/categories/tutorials/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

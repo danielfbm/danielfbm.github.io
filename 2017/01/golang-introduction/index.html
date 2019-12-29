@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    
+    <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Hugo 0.58.3 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="author" content="danielfbm">
+<meta name="keywords" content=", development, kubernetes, docker, golang, devops">
+<meta name="description" content="first post with Hugo website engine">
+
+
+<meta property="og:description" content="first post with Hugo website engine">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Golang introduction">
+<meta name="twitter:title" content="Golang introduction">
+<meta property="og:url" content="https://danielfbm.github.io/2017/01/golang-introduction/">
+<meta property="twitter:url" content="https://danielfbm.github.io/2017/01/golang-introduction/">
+<meta property="og:site_name" content="danielfbm&#39;s blog">
+<meta property="og:description" content="first post with Hugo website engine">
+<meta name="twitter:description" content="first post with Hugo website engine">
+<meta property="og:locale" content="en-us">
+
+  
+    <meta property="article:published_time" content="2017-01-31T23:00:00">
+  
+  
+    <meta property="article:modified_time" content="2017-01-31T23:00:00">
+  
+  
+  
+    
+      <meta property="article:section" content="golang">
+    
+      <meta property="article:section" content="programming languages">
+    
+  
+  
+    
+      <meta property="article:tag" content="golang">
+    
+      <meta property="article:tag" content="go">
+    
+      <meta property="article:tag" content="programming languages">
+    
+      <meta property="article:tag" content="introduction">
+    
+      <meta property="article:tag" content="go setup">
+    
+  
+
+
+<meta name="twitter:card" content="summary">
+
+  <meta name="twitter:site" content="@danielfbm">
+
+
+  <meta name="twitter:creator" content="@danielfbm">
+
+
+
+
+
+
+
+  <meta property="og:image" content="http://res.cloudinary.com/dxucxgkq3/image/upload/c_scale,w_600/v1485922646/fiveyears_wlq0ez.jpg">
+  <meta property="twitter:image" content="http://res.cloudinary.com/dxucxgkq3/image/upload/c_scale,w_600/v1485922646/fiveyears_wlq0ez.jpg">
+
+
+
+
+  <meta property="og:image" content="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png">
+  <meta property="twitter:image" content="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png">
+
+
+    <title>Golang introduction</title>
+
+    <link rel="icon" href="https://danielfbm.github.io/favicon.png">
+    
+
+    
+
+    <link rel="canonical" href="https://danielfbm.github.io/2017/01/golang-introduction/">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    
+    
+    <link rel="stylesheet" href="https://danielfbm.github.io/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
+    
+    
+
+    
+      
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	ga('create', 'UA-79136377-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+
+    
+    
+  </head>
+
+  <body>
+    <div id="blog">
+      <header id="header" data-behavior="4">
+  <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
+  <div class="header-title">
+    <a class="header-title-link" href="https://danielfbm.github.io/">danielfbm&#39;s blog</a>
+  </div>
+  
+    
+      <a class="header-right-picture "
+         href="https://danielfbm.github.io/#about">
+    
+    
+    
+      
+        <img class="header-picture" src="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png" alt="Author&#39;s picture" />
+      
+    
+    </a>
+  
+</header>
+
+      <nav id="sidebar" data-behavior="4">
+  <div class="sidebar-container">
+    
+      <div class="sidebar-profile">
+        <a href="https://danielfbm.github.io/#about">
+          <img class="sidebar-profile-picture" src="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png" alt="Author&#39;s picture" />
+        </a>
+        <h4 class="sidebar-profile-name">danielfbm</h4>
+        
+          <h5 class="sidebar-profile-bio">technology enthusiast and loves coding, kubernetes, containers, games, and DevOps.</h5>
+        
+      </div>
+    
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/categories/golang">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-code"></i>
+      
+      <span class="sidebar-button-desc">Golang</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/tags">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-tags"></i>
+      
+      <span class="sidebar-button-desc">Tags</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/#about">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-question"></i>
+      
+      <span class="sidebar-button-desc">About</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/archives">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-archive"></i>
+      
+      <span class="sidebar-button-desc">Archives</span>
+    </a>
+  </li>
+
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-home"></i>
+      
+      <span class="sidebar-button-desc">Home</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://github.com/danielfbm" target="_blank" rel="noopener">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-github"></i>
+      
+      <span class="sidebar-button-desc">GitHub</span>
+    </a>
+  </li>
+
+
+    </ul>
+    <ul class="sidebar-buttons">
+      
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://danielfbm.github.io/index.xml">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-rss"></i>
+      
+      <span class="sidebar-button-desc">RSS</span>
+    </a>
+  </li>
+
+
+    </ul>
+  </div>
+</nav>
+
+      
+  <div class="post-header-cover
+              text-left
+              post-header-cover--partial"
+       style="background-image:url('http://res.cloudinary.com/dxucxgkq3/image/upload/c_scale,w_600/v1485922646/fiveyears_wlq0ez.jpg')"
+       data-behavior="4">
+    
+  </div>
+
+
+      <div id="main" data-behavior="4"
+        class="hasCover
+               hasCoverMetaOut
+               hasCoverCaption">
+        <article class="post" itemscope itemType="http://schema.org/BlogPosting">
+          
+            <span class="post-header-cover-caption caption">Gopher</span>
+          
+          
+            <div class="post-header main-content-wrap text-left">
+  
+    <h1 class="post-title" itemprop="headline">
+      Golang introduction
+    </h1>
+  
+  
+  <div class="postShorten-meta post-meta">
+    
+      <time itemprop="datePublished" datetime="2017-01-31T23:00:00&#43;08:00">
+        
+  January 31, 2017
+
+      </time>
+    
+    
+  
+  
+    <span>in</span>
+    
+      <a class="category-link" href="https://danielfbm.github.io/categories/golang">golang</a>, 
+    
+      <a class="category-link" href="https://danielfbm.github.io/categories/programming-languages">programming languages</a>
+    
+  
+
+  </div>
+
+</div>
+          
+          <div class="post-content markdown" itemprop="articleBody">
+            <div class="main-content-wrap">
+              
+
+<p>This is for those interested in the <strong>go</strong> programming language. This is my take as an introduction on this amazing language</p>
+
+<p>Honestly there is plenty of resources on the web about <a href="https://golang.org/">golang</a> to fill a lot of content. This post is merely a summary of the things I find most useful and what attracts me the most while programming in <a href="https://golang.org/">go</a></p>
+
+<h4 id="tl-dr">TL; DR</h4>
+
+<p>To install simply download the package for your OS in the <a href="https://golang.org/dl/">golang official download page</a></p>
+
+<p>If you are on macOS and have brew installed: <code>brew update &amp;&amp; brew install golang</code></p>
+
+<p>Check the examples on <a href="https://github.com/danielfbm/go-intro">this git repo</a> to play:</p>
+
+<pre><code class="language-sh"># using the terminal of your choice navigate to the repo folder
+go run &lt;filename&gt;.go
+</code></pre>
+
+<p>In general <a href="https://golang.org/">golang</a> is a very simple, modern and pleasant to use programming language. It is worth giving it a shot specially because of its impressive performance.</p>
+
+<h4 id="download-and-setup">Download and Setup</h4>
+
+<p>If you don&rsquo;t have it installed head right to the official webpage and <a href="https://golang.org/dl/">download it</a>.</p>
+
+<p>After the setup, try the following command in your favorite terminal</p>
+
+<pre><code class="language-sh">go version
+</code></pre>
+
+<p>If everything was setup correctly you will be able to see the installed version and the platform in which you installed it.</p>
+
+<p>As opposite to many languages, <strong>go</strong> uses <em>one main workspace</em> meaning that all your code, and the downloaded third party libraries will cohexist in the same folder structure. This sounds kind of weird in the beginning and most people would prefer to organize their projects in different paths. With time this will prove to become very useful. Besides, there are ways to overcome this limitation, as some would prefer in a enterprise environment.</p>
+
+<p>To set a workspace just set the <code>GOPATH</code> environment variable. An example would be to set this environment in a <code>go</code> folder in the user&rsquo;s home folder:</p>
+
+<pre><code class="language-sh">export GOPATH=~/go
+</code></pre>
+
+<p>Inside the workspace you can create three folders:</p>
+
+<ul>
+<li><code>bin</code> stores all the compiled <em>golang</em> projects</li>
+<li><code>src</code> stores all the source code</li>
+<li><code>pkg</code> stores your OS related tools</li>
+</ul>
+
+<p>If you are using a UNIX like system, just add the <code>export GOPATH</code> command in your <code>.profile</code> or <code>.bash_profile</code> to be loaded as soon as the user is logged in the terminal.</p>
+
+<p>You can find more information regarding the Go installation and workspace</p>
+
+<ul>
+<li><a href="https://golang.org/doc/install">Official documentation</a></li>
+<li><a href="https://www.goinggo.net/2016/05/installing-go-and-your-workspace.html">Post from William Kennedy</a></li>
+</ul>
+
+<h4 id="ide">IDE</h4>
+
+<p>Although there are many idealists that follow the <code>vim</code> philosophy of coding, I prefer more complex and easier to use IDEs. Golang doesn&rsquo;t have any official IDE and probably never will, mostly because all the necessary tools either come with the <strong>go</strong> installer, or can be easily installed.</p>
+
+<p>Here I will explain the one I use and how to set it up for <strong>go</strong>.</p>
+
+<h5 id="microsoft-s-visual-studio-code">Microsoft&rsquo;s Visual Studio Code</h5>
+
+<p>This lightweight IDE works perfectly for me and I have used it for several months. I really enjoy how you can integrate with the golang standard tooling. You can <a href="https://code.visualstudio.com/Download">download it here</a>.</p>
+
+<p>By itself this IDE&rsquo;s features are not very impressive, but the main basics for any IDE. Its power comes from its Extensions. Besides browsing and searching for extensions from inside the IDE (<code>Shift + CMD + X</code> on macOS), <a href="https://marketplace.visualstudio.com/VSCode">VS Code&rsquo;s Extension Marketplace</a> website have as well the same feature.</p>
+
+<p>To support <strong>go</strong> we will first install the <a href="https://marketplace.visualstudio.com/items/lukehoban.Go">vscode-go</a> extension. Its source code is hosted on <a href="https://github.com/Microsoft/vscode-go">this GitHub repo</a>. After installation it will require installation of multiple <strong>go</strong> tools. Some of them will require a VPN if you are in a restricted access network:</p>
+
+<ul>
+<li>gocode: <code>go get -u -v github.com/nsf/gocode</code></li>
+<li>godef: <code>go get -u -v github.com/rogpeppe/godef</code></li>
+<li>gogetdoc: <code>go get -u -v github.com/zmb3/gogetdoc</code></li>
+<li>golint: <code>go get -u -v github.com/golang/lint/golint</code></li>
+<li>go-outline: <code>go get -u -v github.com/lukehoban/go-outline</code></li>
+<li>goreturns: <code>go get -u -v sourcegraph.com/sqs/goreturns</code></li>
+<li>gorename: <code>go get -u -v golang.org/x/tools/cmd/gorename</code></li>
+<li>gopkgs: <code>go get -u -v github.com/tpng/gopkgs</code></li>
+<li>go-symbols: <code>go get -u -v github.com/newhook/go-symbols</code></li>
+<li>guru: <code>go get -u -v golang.org/x/tools/cmd/guru</code></li>
+<li>gotests: <code>go get -u -v github.com/cweill/gotests/...</code></li>
+</ul>
+
+<p>With all the tools installed your VS Code will be ready. By default a few features will be enabled:</p>
+
+<h6 id="autocomplete">Autocomplete</h6>
+
+<p>Once you download some library, or even using the standard library, the code will start to display auto-complete options as the code is typed.</p>
+
+<h6 id="auto-format">Auto format</h6>
+
+<p>Go has a very comprehensive, and sometimes hated, code writting rules. There is where <code>gofmt</code> places an important rule. In this Extension the <code>gofmt</code> will be automatically executed everytime a file is saved. By default it will:</p>
+
+<ul>
+<li>Remove unused imported libraries;</li>
+<li>Spacing code formatting (replacing spaces for tabs when necessary);</li>
+<li>Removing unecessary blank lines;</li>
+</ul>
+
+<h6 id="auto-build-and-auto-lint">Auto-build and auto-lint</h6>
+
+<p>Together with formating the Extension also provides auto-building and linting on save, this makes very quick and simple to see all the possible errors directly inside the IDE and simplifies the coding experience.</p>
+
+<p>There are more functionalities supported by this Extension. Visit its <a href="https://github.com/Microsoft/vscode-go">code repo</a> for more info.</p>
+
+<h4 id="syntax">Syntax</h4>
+
+<p>For those familiar with the C family of programming languages will feel very comfortable writting <strong>go</strong> code. First, most of it is very similar, and those annoying details, like adding a semicolon to the end of every code line,  are different. Lets go directly to the point. Nothing better than a <strong>Hello World</strong> for a quick glance:</p>
+
+<pre><code class="language-go">package main // a package name is expected in every go file as the first line
+
+import &quot;fmt&quot; // importing the fmt standard library
+
+// for the main package a main function is necessary
+// just like C, this is the entry point for our program
+func main() {
+  // Print one line to stdout
+  fmt.Println(&quot;Hello, world&quot;)
+}
+</code></pre>
+
+<h4 id="basics">Basics</h4>
+
+<p>There are a few keypoints that, in short, can define the <strong>go</strong> language:</p>
+
+<ul>
+<li>Compiled language</li>
+<li>Strongly typed</li>
+<li>Opiniated language</li>
+<li>No Classes</li>
+<li>No Generics</li>
+<li>Concurrency from design</li>
+</ul>
+
+<h5 id="variables">Variables</h5>
+
+<p>Below are listed the basic variable types:</p>
+
+<pre><code class="language-go">bool
+
+string
+
+// int is an alias to int32 in 32 bit systems, and int64 for 64 bit
+int  int8  int16  int32  int64
+uint uint8 uint16 uint32 uint64 uintptr
+
+// uint are unsigned integers
+
+
+byte // alias for uint8
+
+rune // alias for int32
+     // represents a Unicode code point
+
+float32 float64
+
+complex64 complex128
+</code></pre>
+
+<p>To create <code>custom types</code> just declare a new type as:</p>
+
+<pre><code class="language-go">type MyType int
+
+// Declare a list of valid values as constants
+const (
+  FirstValue MyType = 1
+  SecondValue MyType = 2
+  LastValue MyType = 99
+)
+</code></pre>
+
+<p>There a multiple ways to declare variables in <strong>go</strong>:</p>
+
+<pre><code class="language-go">package main
+
+import (
+    &quot;fmt&quot;
+)
+
+func main() {
+    // single variable. Variable type comes after the name
+    var i int = 0
+  
+    // multiple variables, single line, j == 1, k == 2
+    var j, k int = 1, 2
+
+    // the same as the line above but with implicit type
+    // note the colon
+    z, x, c := 3, 4, 5
+
+    // multi-line declaration
+    var (
+      one string
+      two string
+      three = &quot;three&quot;
+    )
+}
+</code></pre>
+
+<p>By default each simple type has a &ldquo;zero-value&rdquo;, which are:</p>
+
+<ul>
+<li><code>0</code> for <code>numeric types</code></li>
+<li><code>&quot;&quot;</code> for <code>string</code></li>
+<li><code>false</code> for <code>bool</code></li>
+<li><code>nil</code> for any <code>pointer</code></li>
+</ul>
+
+<p>As all the code is written inside <code>packages</code>, the first letter of a variable name will define it to be <code>public</code> or <code>private</code>:</p>
+
+<pre><code class="language-go">package some_package
+
+var PublicVariable string
+var privateVariable string
+</code></pre>
+
+<p>This concept can be confusing at the beginning, but it is very useful to avoid extra typing. Global public variables can be accessed by other packages using the following syntax:</p>
+
+<pre><code class="language-go">package other_package
+
+import &quot;some_package&quot;
+import &quot;fmt&quot;
+
+func SomeFunction() {
+  fmt.Println(some_package.PublicVariable)
+}
+</code></pre>
+
+<p>Another aspect very specific to <strong>go</strong> is that the compiler will not compile code that declares unused variables. Although this feature can seem discomfortable for some, in general it makes the code overall clear.</p>
+
+<h4 id="functions">Functions</h4>
+
+<p>Public and private functions follow the same rules to variable naming for <code>public</code> and <code>private</code> access</p>
+
+<pre><code class="language-go">// this function can be accessed by other packages
+func PublicFunction (param string, other int) {
+
+}
+
+func privateFunc() {
+
+}
+</code></pre>
+
+<p><strong>Go</strong> also supports returning multiple values, and each return value type should be declared as well</p>
+
+<pre><code class="language-go">func SingleReturn() bool {
+  return false
+}
+
+func MultipleReturn() (bool, string) {
+  return true, &quot;hello&quot;
+}
+
+// it is also possible to declare return type as variables without extra declaration
+func MultipleReturnExplicit() (correct bool, name string) {
+  correct = true
+  name = &quot;a name&quot;
+  return correct, name
+}
+</code></pre>
+
+<h4 id="structs">Structs</h4>
+
+<p>Besides the basic types <code>struct</code> is another very useful type declaration that can be used to compose structure abstractions.</p>
+
+<pre><code class="language-go">// declaring the struct
+type MyStruct struct {
+  PublicVariable string
+  privateVariable string
+}
+
+func Usage() {
+  // constructing a variable of type MyStruct
+  myStruct := MyStruct{
+    PublicVariable: &quot;public&quot;,
+    privateVariable: &quot;private&quot;,
+  }
+
+  fmt.Println(myStruct.PublicVariable)
+}
+</code></pre>
+
+<p>Structs can also have functions</p>
+
+<pre><code class="language-go">// my here is a variable that carries the values of the struct instance
+func (my MyStruct) MyMethod() string {
+  return my.PublicVariable
+}
+</code></pre>
+
+<p>In the example above the <code>my</code> variable is passed to the function as a copy. Using a pointer declaration will enable to change the instance&rsquo;s values</p>
+
+<pre><code class="language-go">func (my *MyStruct) UpdatePrivate(privateValue string) {
+  my.privateVariable = privateValue
+}
+</code></pre>
+
+<h4 id="next">Next</h4>
+
+<p>For a simple introduction this post is already long. Next on we will learn more about the following topics</p>
+
+<ul>
+<li>Pointers</li>
+<li>Collections</li>
+<li>Flow-control</li>
+<li>Defer</li>
+<li>Error handling</li>
+<li>Concurrency, the cool stuff</li>
+</ul>
+
+<h4 id="further-reading">Further reading</h4>
+
+<p>For a more complete understanding of the <strong>go</strong> language, syntax, and usage please refer to the following sources:</p>
+
+<ul>
+<li><a href="https://golang.org/doc/effective_go.html">Effective go</a> for tips on writing clear, idiomatic Go code.</li>
+<li><a href="https://www.golang-book.com/books/intro">An introduction to programming in go</a> for a free online e-book.</li>
+<li><a href="https://github.com/dariubs/GoBooks">A full list of books about go</a></li>
+</ul>
+
+<p>For the example codes in this post please refer to <a href="https://github.com/danielfbm/go-intro">this code repo</a>.</p>
+
+              
+            </div>
+          </div>
+          <div id="post-footer" class="post-footer main-content-wrap">
+            
+              
+                
+                
+                  <div class="post-footer-tags">
+                    <span class="text-color-light text-small">TAGGED IN</span><br/>
+                    
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/golang/">golang</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/go/">go</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/programming-languages/">programming languages</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/introduction/">introduction</a>
+
+  <a class="tag tag--primary tag--small" href="https://danielfbm.github.io/tags/go-setup/">go setup</a>
+
+                  </div>
+                
+              
+            
+            <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://danielfbm.github.io/2019/12/sonobuoy-v0.16.3/" data-tooltip="Sonobuoy v0.16.3">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/" data-tooltip="Tasks app and microservices architecture">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+            
+              
+                <div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+              
+            
+          </div>
+        </article>
+        <footer id="footer" class="main-content-wrap">
+  <span class="copyrights">
+    &copy; 2019 danielfbm. All Rights Reserved
+  </span>
+</footer>
+
+      </div>
+      <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+        <div class="post-actions-wrap">
+  
+      <nav >
+        <ul class="post-actions post-action-nav">
+          
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://danielfbm.github.io/2019/12/sonobuoy-v0.16.3/" data-tooltip="Sonobuoy v0.16.3">
+              
+                  <i class="fa fa-angle-left"></i>
+                  <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
+                </a>
+            </li>
+            <li class="post-action">
+              
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/" data-tooltip="Tasks app and microservices architecture">
+              
+                  <span class="hide-xs hide-sm text-small icon-mr">PREVIOUS</span>
+                  <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+          
+        </ul>
+      </nav>
+    <ul class="post-actions post-action-share" >
+      
+        <li class="post-action hide-lg hide-md hide-sm">
+          <a class="post-action-btn btn btn--default btn-open-shareoptions" href="#btn-open-shareoptions">
+            <i class="fa fa-share-alt"></i>
+          </a>
+        </li>
+        
+      
+      
+        <li class="post-action">
+          <a class="post-action-btn btn btn--default" href="#disqus_thread">
+            <i class="fa fa-comment-o"></i>
+          </a>
+        </li>
+      
+      <li class="post-action">
+        
+          <a class="post-action-btn btn btn--default" href="#">
+        
+          <i class="fa fa-list"></i>
+        </a>
+      </li>
+    </ul>
+  
+</div>
+
+      </div>
+      <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+  <i id="btn-close-shareoptions" class="fa fa-close"></i>
+  <ul class="share-options">
+    
+  </ul>
+</div>
+<div id="share-options-mask" class="share-options-mask"></div>
+    </div>
+    
+    <div id="about">
+  <div id="about-card">
+    <div id="about-btn-close">
+      <i class="fa fa-remove"></i>
+    </div>
+    
+      <img id="about-card-picture" src="http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png" alt="Author&#39;s picture" />
+    
+    <h4 id="about-card-name">danielfbm</h4>
+    
+      <div id="about-card-bio">technology enthusiast and loves coding, kubernetes, containers, games, and DevOps.</div>
+    
+    
+      <div id="about-card-job">
+        <i class="fa fa-briefcase"></i>
+        <br/>
+        Developer
+      </div>
+    
+    
+      <div id="about-card-location">
+        <i class="fa fa-map-marker"></i>
+        <br/>
+        Beijing, China
+      </div>
+    
+  </div>
+</div>
+
+    
+
+    
+  
+    
+      <div id="cover" style="background-image:url('https://danielfbm.github.io/images/background.png');"></div>
+    
+  
+
+
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.4/jquery.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.7/js/jquery.fancybox.min.js" integrity="sha256-GEAnjcTqVP+vBp3SSc8bEDQqvWAZMiHyUSIorrWwH50=" crossorigin="anonymous"></script>
+
+
+<script src="https://danielfbm.github.io/js/script-pcw6v3xilnxydl1vddzazdverrnn9ctynvnxgwho987mfyqkuylcb1nlt.min.js"></script>
+
+
+<script lang="javascript">
+window.onload = updateMinWidth;
+window.onresize = updateMinWidth;
+document.getElementById("sidebar").addEventListener("transitionend", updateMinWidth);
+function updateMinWidth() {
+  var sidebar = document.getElementById("sidebar");
+  var main = document.getElementById("main");
+  main.style.minWidth = "";
+  var w1 = getComputedStyle(main).getPropertyValue("min-width");
+  var w2 = getComputedStyle(sidebar).getPropertyValue("width");
+  var w3 = getComputedStyle(sidebar).getPropertyValue("left");
+  main.style.minWidth = `calc(${w1} - ${w2} - ${w3})`;
+}
+</script>
+
+
+  
+    
+      <script>
+        var disqus_config = function () {
+          this.page.url = 'https:\/\/danielfbm.github.io\/2017\/01\/golang-introduction\/';
+          
+            this.page.identifier = '\/2017\/01\/golang-introduction\/'
+          
+        };
+        (function() {
+          
+          
+          if (window.location.hostname == "localhost") {
+            return;
+          }
+          var d = document, s = d.createElement('script');
+          var disqus_shortname = 'danielfbm';
+          s.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+
+          s.setAttribute('data-timestamp', +new Date());
+          (d.head || d.body).appendChild(s);
+        })();
+      </script>
+    
+  
+
+
+
+
+    
+  </body>
+</html>
+

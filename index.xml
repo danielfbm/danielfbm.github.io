@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>danielfbm&#39;s blog</title>
+    <link>https://danielfbm.github.io/</link>
+    <description>Recent content on danielfbm&#39;s blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 29 Dec 2019 15:52:19 +0800</lastBuildDate>
+    
+	<atom:link href="https://danielfbm.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>My First Sonobuoy Contribution</title>
+      <link>https://danielfbm.github.io/2019/12/my-first-sonobuoy-contribution/</link>
+      <pubDate>Sun, 29 Dec 2019 15:52:19 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/2019/12/my-first-sonobuoy-contribution/</guid>
+      <description>While using Sonobuoy as our main test runner engine at Alauda we noticed a small issue and decided to contribute the patch:
+Sonobuoy will create Kubernetes RBAC ClusterRole and ClusterRoleBinding but will also destroy together with all the test data. This is ideal, but in the current implementation it will delete it globally affecting other parallel tests permissions, resulting in lots of permission failures. This Pull-request solves this issue by adding a test run namespace label to all Cluster resources, and make these resource names unique according to the namespace.</description>
+    </item>
+    
+    <item>
+      <title>Sonobuoy v0.16.3</title>
+      <link>https://danielfbm.github.io/2019/12/sonobuoy-v0.16.3/</link>
+      <pubDate>Sat, 14 Dec 2019 11:59:59 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/2019/12/sonobuoy-v0.16.3/</guid>
+      <description>Here is the Official website link and the GitHub repo.
+Update: version v0.17.0 is available
+What is Sonobuoy? According to the website:
+ Sonobuoy is a diagnostic tool that makes it easier to understand the state of a Kubernetes cluster by running a set of plugins (including Kubernetes conformance tests) in an accessible and non-destructive manner. It is a customizable, extendable, and cluster-agnostic way to generate clear, informative reports about your cluster.</description>
+    </item>
+    
+    <item>
+      <title>Golang introduction</title>
+      <link>https://danielfbm.github.io/2017/01/golang-introduction/</link>
+      <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/2017/01/golang-introduction/</guid>
+      <description>This is for those interested in the go programming language. This is my take as an introduction on this amazing language
+Honestly there is plenty of resources on the web about golang to fill a lot of content. This post is merely a summary of the things I find most useful and what attracts me the most while programming in go
+TL; DR To install simply download the package for your OS in the golang official download page</description>
+    </item>
+    
+    <item>
+      <title>Tasks app and microservices architecture</title>
+      <link>https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/</link>
+      <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/</guid>
+      <description>In this post we will explore some basic concepts while working with a microservices architecture in a distributed application. If you are not very familiar with microservices and the motivation behind it, you should take a look at this series of posts from NGINX that gives a great introduction on the subject.
+All the concepts are quite simple and although the autor had sugested a few things to get started I will take you through the construction of a simple microservices app that you could deploy anywhere.</description>
+    </item>
+    
+    <item>
+      <title>How I setup this blog</title>
+      <link>https://danielfbm.github.io/2016/06/how-i-setup-this-blog/</link>
+      <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/2016/06/how-i-setup-this-blog/</guid>
+      <description>Introduction Well, let me first introduce myself. My name is Daniel, I am rather happy Brazilian currently living in Beijing, China.
+I am technology fan, and from childhood I started to become very interested in computers and other eletronic gadgets. My working experience is mostly in Software Development. In the beginning it was mostly focused on the .NET platform (from 2004 until 2011) on the Windows environment, later on I started to learn Unix systems, software testing.</description>
+    </item>
+    
+  </channel>
+</rss>
