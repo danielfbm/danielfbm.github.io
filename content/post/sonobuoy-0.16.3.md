@@ -2,6 +2,17 @@
 title: "Sonobuoy v0.16.3"
 date: 2019-12-14T11:59:59+08:00
 draft: false
+keywords:
+- kubernetes
+- k8s
+- testing
+- sonobuoy
+- e2e
+- docker
+tags:  
+- kubernetes
+- testing
+- sonobuoy
 ---
 
 Here is the [Official website link](https://sonobuoy.io/) and the [GitHub repo](https://github.com/vmware-tanzu/sonobuoy).
