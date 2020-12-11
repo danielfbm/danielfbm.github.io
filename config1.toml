@@ -1,0 +1,299 @@
+
+# set `baseurl` to your root domain
+# if you set it to "/" share icons won't work properly on production
+baseurl = "https://example.com/"  # Include trailing slash
+title = "Clarity"
+author = "Daniel Morinigo"
+copyright = "Copyright © 2008–2018, Steve Francia and the Hugo Authors; all rights reserved."
+# canonifyurls = true
+paginate = 10
+theme = "hugo-clarity"
+
+disqusShortname = ""
+
+DefaultContentLanguage = "en"
+# [languages]
+# config/_default/languages.toml
+
+# [menus]
+# config/_default/menus/menu.xx.toml
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
+
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true # change to false to disable inclusion of rawHTML and math functions
+      xhtml = false
+    [markup.goldmark.extensions]
+      typographer = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = true
+    hl_Lines = "--"
+    lineNoStart = 1
+    lineNos = true # always set to true # else line numbers won't show at all! even when you toggle them on in the UI
+    lineNumbersInTable = false # toggling this on (i.e to true) or deleting this line will break the code blocks functionality. Will
+    noClasses = false
+    # style = "monokai"
+    tabWidth = 2
+
+[params]
+author = "Daniel Morinigo"
+twitter = "@danielfbm"
+largeTwitterCard = false # set to true if you want to show a large twitter card image. The default is a small twitter card image
+#introDescription = "Technologist, perpetual student, teacher, continual incremental improvement."
+introDescription = "technology enthusiast that loves coding, DevOps, kubernetes, containers, games, and much more."
+description = "Kubernetes, DevOps, coding and other interesting topics in this perssonal blog" # set your site's description here. will be use for home page content meta tags (seo). Alternatively set this description in your homepage content file i.e content/_index.md. Whatever is set in the latter will take precedence
+
+# Google analytics Id
+ga_analytics = "XXXXXXXXXX"
+
+# Baidu analytics Id
+# baidu_analytics = "XXXXXXXX"
+
+# limit the number of taxonomies links shown on the sidebar of each page by default.
+numberOfTagsShown = 14 # Applies for all other default & custom taxonomies. e.g categories, brands see https://gohugo.io/content-management/taxonomies#what-is-a-taxonomy
+
+# will be used on share >> twitter, facebook, linkedin
+fallBackOgImage = "images/thumbnail.png"
+
+# sets the maximum number of lines per codeblock. The codeblock will however be scrollable and expandable.
+codeMaxLines = 7
+
+# disable showing line numbers by default. Switch to `true` if you'd rather have them on.
+codeLineNumbers = false
+
+# enable math notation. Swith to `true` to enable mathjax in your site.
+enableMathNotation = false
+
+# directory(s) where your articles are located
+mainSections = ["post"] # see config details here https://gohugo.io/functions/where/#mainsections
+
+# center logo on navbar
+centerLogo = false # Set to "true" for centering or "false" for left aligned.
+
+logo = "logos/logo.png"
+
+# Label Non inline images on an article body
+figurePositionShow = false # toggle on or off globally
+# you can toggle this behaviour on or off on per page using the same variable inside your articles frontmatter
+figurePositionLabel = "Figure" # the text before image number e.g Figure 1.0
+
+# Set the collapsed mobile navigation to either appear from the left or the right
+mobileNavigation = "left" # if you prefer right change to 'right'
+
+# some site owners want to decide how they would like their sites to be introduced users. These settings give you as a site owner to decide how the user will view your site for the first time.
+
+# please note that you cannot enforce both modes at the same time. i.e by enforcing one mode, you priotise it over the other (by setting it to true). enforceDarkMode will be commented out
+
+# please also not that mode toggle UI will remain in place. That way, if a user prefers darkmode, they can have their way.
+
+enforceLightMode = false
+# enforceDarkMode = false
+
+# Text for the languages menu.
+languageMenuName = "🌐"
+
+# Title separator, default to |.
+# titleSeparator = "|"
+
+# Enable or disable comment globally. Default to true.
+# comment = false
+
+# Maximum number of recent posts.
+# numberOfRecentPosts = 8
+
+# Maximum number of featured posts.
+# numberOfFeaturedPosts = 8
+
+# Date format. Checkout https://gohugo.io/functions/format/#hugo-date-and-time-templating-reference for details.
+# dateFormat = "2006-01-02" # Default to "Jan 2, 2006".
+# customFonts = false # toggle to true if you want to use custom fonts only.
+
+# The year when ths website was created
+# since = 2016
+
+
+# # Tranquilpeak
+# # Version : 0.2.1-ALPHA
+# # Author : Thibaud Leprêtre
+
+# # I STRONGLY recommend you to use a CDN to speed up loading of pages.
+# # There is many free CDN like Cloudinary or you can also use indirectly
+# # by using services like Google Photos.
+
+# # If you want to store images yourself, please read this guidelines:
+# # For users, if you only use this theme, put your images directly in `source/assets/images` folder
+# # But if you want to add local images, you can put your images directly in `source/assets/images` folder
+# # For developpers, if you modify this theme, put your images in `source/images` folder and
+# # use grunt task `build` to synchronize assets
+
+# baseurl = "https://danielfbm.github.io/"
+# languageCode = "en-us"
+# defaultContentLanguage = "en-us"
+# title = "danielfbm's blog"
+# # theme = "hugo-tranquilpeak-themecustom"
+# theme = "hugo-tranquilpeak-theme"
+# disqusShortname = "danielfbm"
+# googleAnalytics = "UA-79136377-1"
+# MetaDataFormat = "yaml"
+# paginate = 7
+# canonifyurls = true
+
+# [permalinks]
+#   post = "/:year/:month/:slug/"
+
+# [taxonomies]
+#   tag = "tags"
+#   category = "categories"
+#   archive = "archives"
+
+# [author]
+#   name = "danielfbm"
+#   bio = "technology enthusiast and loves coding, kubernetes, containers, games, and DevOps."
+#   job = "Developer"
+#   location = "Beijing, China"
+#   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
+#   # gravatarEmail = "danielfbm@gmail.com"
+#   # Your profile picture
+#   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
+#   picture = "http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853012/avatar_gggwih.png"
+#   # Your Twitter username without the @. E.g : thibaudlepretre
+#   twitter = "danielfbm"
+#   # Your google plus profile id. E.g : +ThibaudLepretre or 114625208755123718311
+#   # googlePlus = "+Danielfbm"
+
+# # Menu Configuration
+# [[menu.main]]
+#   weight = 0
+#   identifier = "home"
+#   name = "Home"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-home\"></i>"
+#   url = "/"
+# [[menu.main]]
+#   weight = 1
+#   identifier = "golang"
+#   name = "Golang"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-code\"></i>"
+#   url = "/categories/golang"
+# # [[menu.main]]
+# #   weight = 1
+# #   identifier = "categories"
+# #   name = "Categories"
+# #   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-bookmark\"></i>"
+# #   url = "/categories"
+# [[menu.main]]
+#   weight = 2
+#   identifier = "tags"
+#   name = "Tags"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
+#   url = "/tags"
+# [[menu.main]]
+#   weight = 4
+#   identifier = "archives"
+#   name = "Archives"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
+#   url = "/archives"
+# [[menu.main]]
+#   weight = 4
+#   identifier = "about"
+#   name = "About"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
+#   url = "/#about"
+
+# [[menu.links]]
+#   weight = 0
+#   identifier = "github"
+#   name = "GitHub"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
+#   url = "https://github.com/danielfbm"
+
+# [[menu.misc]]
+#   weight = 0
+#   identifier = "rss"
+#   name = "RSS"
+#   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-rss\"></i>"
+#   url = "/index.xml"
+
+# [params]
+#   # Customize date format use to render blog post date, categories and other
+#   # You must use date format used by Go Time package https://golang.org/pkg/time/
+#   # Months (not work with short month like "jan", "feb", etc) are translated if translation exists on i18n folders
+#   # Default format is: January 2, 2006 
+#   # dateFormat = "2 January 2006"
+
+#   # Global keywords configuration. Following keywords will be add to every pages
+#   keywords = ["development", "kubernetes", "docker", "golang", "devops"]
+
+#   # Hide sidebar on all article page to let article take full width to improve reading, and enjoy wide images and cover images. (true: enable, false: disable)
+#   clearReading = true
+
+#   # Define categories will create hierarchy between parents: `categories = ["foo", "bar"]` will consider "bar" a sub-category of "foo". 
+#   # If false it will flat categories.
+#   hierarchicalCategories = false
+
+#   # description = "Hugo tranquilpeak theme demo"
+
+#   # Customization
+#   # Define the behavior of the sidebar
+#   # 1: Display extra large sidebar on extra large screen, large sidebar on large screen,
+#   #    medium sidebar on medium screen and header bar on small screen and
+#   # extra large sidebar is swiped on extra large screen and large sidebar on all lower screen (default)
+#   # 2: Display large sidebar on large screen, medium sidebar on medium screen and
+#   #    header bar on small screen and large sidebar is swiped
+#   # 3: Display medium sidebar on large and medium screen and header bar on small screen and
+#   #    medium sidebar is swiped
+#   # 4: Display header bar on all screens, extra large sidebar is swiped on extra large screen and
+#   #    large sidebar is swiped on all lower screens
+#   # 5: Display header bar on all screens and large sidebar is swiped on large screen
+#   # 6: Display header bar on all screens and medium sidebar is swiped
+#   sidebarBehavior = 1
+
+#   # Your blog cover picture. I STRONGLY recommend you to use a CDN to speed up loading of pages.
+#   # There is many free CDN like Cloudinary or you can also use indirectly
+#   # by using services like Google Photos.
+#   # Current image is on AWS S3 and delivered by AWS CloudFront.
+#   # Otherwise put your image in folder `static/_images/` (development)  or in `source/assets/images/` if you can't or don't want to build the theme,
+#   # and use relative url : `your-image.png`
+#   # coverImage = "http://res.cloudinary.com/dxucxgkq3/image/upload/v1485853037/background_e4efcw.jpg"
+#   coverImage = "/images/background.png"
+
+#   # Display an image gallery at the end of a post which have photos variables (false: disabled, true: enabled)
+#   imageGallery = true
+
+#   # Display thumbnail image of each post on index pages (false: disabled, true: enabled)
+#   thumbnailImage = true
+#   # Display thumbnail image at the right of title in index pages (`right`, `left` or `bottom`)
+#   # Set this value to `right` if you have old posts to keep the old style on them
+#   # and define `thumbnailImagePosition` on a post to overwrite this setting
+#   thumbnailImagePosition = "bottom"
+#   # Automatically select the cover image or the first photo from the gallery of a post if there is no thumbnail image as the thumbnail image
+#   # Set this value to `true` if you have old posts that use the cover image or the first photo as the thumbnail image
+#   # and set `autoThumbnailImage` to `false` on a post to overwrite this setting
+#   autoThumbnailImage = true
+
+#   # Header configuration
+#   # The link at the right of the header is customizable
+#   # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
+#   # By default, author's gravatar or author's picture is displayed.
+#   #     url: /#search
+#   #     icon: search
+#   #     class: st-search-show-outputs
+#   [params.header.rightLink]
+#     class = ""
+#     icon = ""
+#     url = "/#about"
+
+#   # Customize like of athor avatar in sidebar
+#   # [params.sidebar.profile]
+#   #   url = "/#about"
+
+#   # Customize copyright value "© 2016 <CUSTOMIZATION>. All Rights Reserved"
+#   # [params.footer]
+#   #   copyright = "<a href=\"https://github.com/kakawait\">kakawait</a>"
