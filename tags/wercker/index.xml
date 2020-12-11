@@ -1,22 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>wercker on danielfbm&#39;s blog</title>
-    <link>https://danielfbm.github.io/tags/wercker/</link>
-    <description>Recent content in wercker on danielfbm&#39;s blog</description>
+    <title>wercker on danielfbm</title>
+    <link>https://examplesite.com/tags/wercker/</link>
+    <description>Recent content in wercker on danielfbm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 19 Jun 2016 18:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://danielfbm.github.io/tags/wercker/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 19 Jun 2016 18:00:00 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/wercker/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>How I setup this blog</title>
-      <link>https://danielfbm.github.io/2016/06/how-i-setup-this-blog/</link>
+      <link>https://examplesite.com/post/new-start/</link>
       <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
       
-      <guid>https://danielfbm.github.io/2016/06/how-i-setup-this-blog/</guid>
+      <guid>https://examplesite.com/post/new-start/</guid>
       <description>Introduction Well, let me first introduce myself. My name is Daniel, I am rather happy Brazilian currently living in Beijing, China.
 I am technology fan, and from childhood I started to become very interested in computers and other eletronic gadgets. My working experience is mostly in Software Development. In the beginning it was mostly focused on the .NET platform (from 2004 until 2011) on the Windows environment, later on I started to learn Unix systems, software testing.</description>
     </item>

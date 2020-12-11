@@ -1,22 +1,17 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>golang on danielfbm&#39;s blog</title>
-    <link>https://danielfbm.github.io/tags/golang/</link>
-    <description>Recent content in golang on danielfbm&#39;s blog</description>
+    <title>golang on danielfbm</title>
+    <link>https://examplesite.com/tags/golang/</link>
+    <description>Recent content in golang on danielfbm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Tue, 31 Jan 2017 23:00:00 +0800</lastBuildDate>
-    
-	<atom:link href="https://danielfbm.github.io/tags/golang/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Tue, 31 Jan 2017 23:00:00 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/golang/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang introduction</title>
-      <link>https://danielfbm.github.io/2017/01/golang-introduction/</link>
+      <link>https://examplesite.com/post/golang-intro/</link>
       <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
       
-      <guid>https://danielfbm.github.io/2017/01/golang-introduction/</guid>
+      <guid>https://examplesite.com/post/golang-intro/</guid>
       <description>This is for those interested in the go programming language. This is my take as an introduction on this amazing language
 Honestly there is plenty of resources on the web about golang to fill a lot of content. This post is merely a summary of the things I find most useful and what attracts me the most while programming in go
 TL; DR To install simply download the package for your OS in the golang official download page</description>

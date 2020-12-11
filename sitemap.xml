@@ -1,189 +1,197 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://danielfbm.github.io/</loc>
+    <loc>https://examplesite.com/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/kubernetes/</loc>
+    <loc>https://examplesite.com/tags/kubernetes/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/2019/12/my-first-sonobuoy-contribution/</loc>
+    <loc>https://examplesite.com/post/sonobuoy-contribution/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/post/</loc>
+    <loc>https://examplesite.com/post/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/sonobuoy/</loc>
+    <loc>https://examplesite.com/tags/sonobuoy/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/</loc>
+    <loc>https://examplesite.com/tags/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/testing/</loc>
+    <loc>https://examplesite.com/tags/testing/</loc>
     <lastmod>2019-12-29T15:52:19+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/2019/12/sonobuoy-v0.16.3/</loc>
+    <loc>https://examplesite.com/post/sonobuoy-0.16.3/</loc>
     <lastmod>2019-12-14T11:59:59+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/categories/</loc>
+    <loc>https://examplesite.com/categories/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/go/</loc>
+    <loc>https://examplesite.com/tags/go/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/go-setup/</loc>
+    <loc>https://examplesite.com/tags/go-setup/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/categories/golang/</loc>
+    <loc>https://examplesite.com/tags/golang/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/golang/</loc>
+    <loc>https://examplesite.com/categories/golang/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/2017/01/golang-introduction/</loc>
+    <loc>https://examplesite.com/post/golang-intro/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/introduction/</loc>
+    <loc>https://examplesite.com/tags/introduction/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/programming-languages/</loc>
+    <loc>https://examplesite.com/tags/programming-languages/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/categories/programming-languages/</loc>
+    <loc>https://examplesite.com/categories/programming-languages/</loc>
     <lastmod>2017-01-31T23:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/architecture/</loc>
+    <loc>https://examplesite.com/tags/architecture/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/categories/docker/</loc>
+    <loc>https://examplesite.com/categories/docker/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/docker/</loc>
+    <loc>https://examplesite.com/tags/docker/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/dockerfile/</loc>
+    <loc>https://examplesite.com/tags/dockerfile/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/example/</loc>
+    <loc>https://examplesite.com/tags/example/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/categories/microservices/</loc>
+    <loc>https://examplesite.com/categories/microservices/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/microservices/</loc>
+    <loc>https://examplesite.com/tags/microservices/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/python/</loc>
+    <loc>https://examplesite.com/tags/python/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/tasks-app/</loc>
+    <loc>https://examplesite.com/tags/tasks-app/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/2016/08/tasks-app-and-microservices-architecture/</loc>
+    <loc>https://examplesite.com/post/post-task-manager/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/thirft/</loc>
+    <loc>https://examplesite.com/tags/thirft/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/tutorial/</loc>
+    <loc>https://examplesite.com/tags/tutorial/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/categories/tutorials/</loc>
+    <loc>https://examplesite.com/categories/tutorials/</loc>
     <lastmod>2016-08-21T20:51:42+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/blog/</loc>
+    <loc>https://examplesite.com/tags/blog/</loc>
     <lastmod>2016-06-19T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/github.io/</loc>
+    <loc>https://examplesite.com/tags/github.io/</loc>
     <lastmod>2016-06-19T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/2016/06/how-i-setup-this-blog/</loc>
+    <loc>https://examplesite.com/post/new-start/</loc>
     <lastmod>2016-06-19T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/hugo/</loc>
+    <loc>https://examplesite.com/tags/hugo/</loc>
     <lastmod>2016-06-19T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/static-site/</loc>
+    <loc>https://examplesite.com/tags/static-site/</loc>
     <lastmod>2016-06-19T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/tags/wercker/</loc>
+    <loc>https://examplesite.com/tags/wercker/</loc>
     <lastmod>2016-06-19T18:00:00+08:00</lastmod>
   </url>
   
   <url>
-    <loc>https://danielfbm.github.io/archives/</loc>
+    <loc>https://examplesite.com/archive/</loc>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/search/</loc>
+  </url>
+  
+  <url>
+    <loc>https://examplesite.com/series/</loc>
   </url>
   
 </urlset>
