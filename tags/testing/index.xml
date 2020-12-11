@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>testing on danielfbm</title>
-    <link>https://examplesite.com/tags/testing/</link>
+    <link>https://danielfbm.github.io/tags/testing/</link>
     <description>Recent content in testing on danielfbm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Dec 2019 15:52:19 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/testing/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 29 Dec 2019 15:52:19 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/tags/testing/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My First Sonobuoy Contribution</title>
-      <link>https://examplesite.com/post/sonobuoy-contribution/</link>
+      <link>https://danielfbm.github.io/post/sonobuoy-contribution/</link>
       <pubDate>Sun, 29 Dec 2019 15:52:19 +0800</pubDate>
       
-      <guid>https://examplesite.com/post/sonobuoy-contribution/</guid>
+      <guid>https://danielfbm.github.io/post/sonobuoy-contribution/</guid>
       <description>While using Sonobuoy as our main test runner engine at Alauda we noticed a small issue and decided to contribute the patch:
 Sonobuoy will create Kubernetes RBAC ClusterRole and ClusterRoleBinding but will also destroy together with all the test data. This is ideal, but in the current implementation it will delete it globally affecting other parallel tests permissions, resulting in lots of permission failures. This Pull-request solves this issue by adding a test run namespace label to all Cluster resources, and make these resource names unique according to the namespace.</description>
     </item>
     
     <item>
       <title>Sonobuoy v0.16.3</title>
-      <link>https://examplesite.com/post/sonobuoy-0.16.3/</link>
+      <link>https://danielfbm.github.io/post/sonobuoy-0.16.3/</link>
       <pubDate>Sat, 14 Dec 2019 11:59:59 +0800</pubDate>
       
-      <guid>https://examplesite.com/post/sonobuoy-0.16.3/</guid>
+      <guid>https://danielfbm.github.io/post/sonobuoy-0.16.3/</guid>
       <description>Here is the Official website link and the GitHub repo.
 Update: version v0.17.0 is available
 What is Sonobuoy? According to the website:

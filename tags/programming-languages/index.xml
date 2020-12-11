@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>programming languages on danielfbm</title>
-    <link>https://examplesite.com/tags/programming-languages/</link>
+    <link>https://danielfbm.github.io/tags/programming-languages/</link>
     <description>Recent content in programming languages on danielfbm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Tue, 31 Jan 2017 23:00:00 +0800</lastBuildDate><atom:link href="https://examplesite.com/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 31 Jan 2017 23:00:00 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/tags/programming-languages/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Golang introduction</title>
-      <link>https://examplesite.com/post/golang-intro/</link>
+      <link>https://danielfbm.github.io/post/golang-intro/</link>
       <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
       
-      <guid>https://examplesite.com/post/golang-intro/</guid>
+      <guid>https://danielfbm.github.io/post/golang-intro/</guid>
       <description>This is for those interested in the go programming language. This is my take as an introduction on this amazing language
 Honestly there is plenty of resources on the web about golang to fill a lot of content. This post is merely a summary of the things I find most useful and what attracts me the most while programming in go
 TL; DR To install simply download the package for your OS in the golang official download page</description>
