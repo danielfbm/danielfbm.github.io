@@ -1,0 +1,124 @@
+baseURL: "https://examplesite.com"
+title: danielfbm
+paginate: 8
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+enableInlineShortcodes: true
+
+googleAnalytics: UA-123-45
+
+minify:
+    disableXML: true
+    minifyOutput: true
+  
+languages:
+    en:
+        languageName: "English"
+        weight: 1
+        menu:
+            main:
+                - name: Search
+                  url: search/
+                  weight: 10
+                - name: Tags
+                  url: tags/
+                  weight: 10
+                - name: Archive
+                  url: archives
+                  weight: 20
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: danielfbm
+    description: "Kubernetes, DevOps, coding, Continuous Integration, Continuous Delivery, and other interesting topics in this personal blog"
+    author: danielfbm
+    # author: ["Me", "You"] # multiple authors
+
+    #images: "<link or path of image for opengraph, twitter-cards>"
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    comments: true
+    defaultTheme: auto
+    disableThemeToggle: false
+    disableSpecial1stPost: false
+
+    assets:
+        favicon: "favicon.ico"
+        favicon16x16: "favicon-16x16.png"
+        favicon32x32: "favicon-32x32.png"
+        apple_touch_icon: "apple-icon.png"
+        safari_pinned_tab: "apple-icon-precomposed.png"
+
+    label:
+        text: "blog"
+        icon: /apple-icon.png
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: false # needs to be explicitly set
+        title: danielfbm
+        # imageUrl: '<img location>'
+        # imageTitle: my image
+        buttons:
+            - name: Posts
+              url: posts
+            - name: Tags
+              url: tags
+
+    # home-info mode
+    homeInfoParams:
+        Title: "danielfbm ☕"
+        Content: Kubernetes, 🐳 Containers, 🧰 DevOps, 💻 coding, 🛠️ Continuous Integration, 📦 Continuous Delivery, and other interesting topics
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/danielfbm"
+        - name: stackoverflow
+          url: "https://stackoverflow.com/users/2412494/danielfbm"
+        - name: github
+          url: "https://github.com/danielfbm"
+
+    analytics:
+        google:
+            SiteVerificationTag: "XYZabc"
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+
+taxonomies:
+    category: categories
+    tag: tags
+    series: series
+
+privacy:
+    vimeo:
+        disabled: false
+        simple: true
+
+    twitter:
+        disabled: false
+        enableDNT: true
+        simple: true
+
+    instagram:
+        disabled: false
+        simple: true
+
+    youtube:
+        disabled: false
+        privacyEnhanced: true
+
+services:
+    instagram:
+        disableInlineCSS: true
+    twitter:
+        disableInlineCSS: true
