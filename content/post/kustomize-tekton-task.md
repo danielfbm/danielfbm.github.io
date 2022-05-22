@@ -1,5 +1,5 @@
 ---
-title: "How to reuse steps in Tekton tasks"
+title: "How to reuse steps in Tekton tasks with kustomize"
 date: 2022-05-22T11:34:00+08:00
 draft: false
 keywords:
