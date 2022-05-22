@@ -7,7 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 22 May 2022 11:34:00 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>How to reuse steps in Tekton tasks</title>
+      <title>How to reuse steps in Tekton tasks with kustomize</title>
       <link>https://danielfbm.github.io/post/kustomize-tekton-task/</link>
       <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
       
