@@ -15,9 +15,9 @@ tags:
 - kustomize
 ---
 
-Creating [`Tekton`](https://tekton.dev) tasks is real fun! Its similiarities to pod containers, and how it works makes developing and testing super easy. Still, sometimes it is necessary to reuse a steps in multiple tasks, like when using [`reviewdog`](https://github.com/reviewdog/reviewdog).
+Creating [`Tekton`](https://tekton.dev) tasks is real fun! Its similarities to pod containers, and how it works make developing and testing super easy. Still, sometimes it is necessary to reuse steps in multiple tasks, like when using [`reviewdog`](https://github.com/reviewdog/reviewdog).
 
-In this post we will learn how to do this very easily using [`kustomize`](https://kustomize.io), and the repo [`danielfbm/tekton-tasks-kustomize`](https://github.com/danielfbm/tekton-tasks-kustomize) has ready to use example.
+In this post, we will learn how to do this very easily using [`kustomize`](https://kustomize.io), and the repo [`danielfbm/tekton-tasks-kustomize`](https://github.com/danielfbm/tekton-tasks-kustomize) has a ready-to-use example.
 
 Let's say we want two different tasks `golang-test` and `golangci-lint` need to add a `reviewdog-report` step as seen below
 
@@ -25,7 +25,7 @@ Let's say we want two different tasks `golang-test` and `golangci-lint` need to 
 ![tasks](/images/kustomize-tekton-task/tasks-diagram.drawio.png)
 
 
-The most  obvious way would be copying and pasting the steps, but for more complex scenarios, where there are `n` tasks, this becomes error prone. Using a template engine like [`helm`](https://helm.sh) could help, but learning another templating engine, plus having to change the contents of said tasks also becomes a burden. Instead, [`kustomize`](https://kustomize.io) has a set of tools to make this job easier, while enjoying reutilizing tasks from the [`tektoncd/catalog`](https://github.com/tektoncd/catalog).
+The most  obvious way would be copying and pasting the steps, but for more complex scenarios, where there are `n` tasks, this becomes error-prone. Using a template engine like [`helm`](https://helm.sh) could help, but learning another templating engine, plus having to change the contents of said tasks also becomes a burden. Instead, [`kustomize`](https://kustomize.io) has a set of tools to make this job easier, while enjoying reutilizing tasks from the [`tektoncd/catalog`](https://github.com/tektoncd/catalog).
 
 ## Folder structure
 
@@ -35,12 +35,12 @@ The most  obvious way would be copying and pasting the steps, but for more compl
 └── tasks
 ```
 
- - *tasks* will host your tasks files
- - *overlays* will host your patches, like adding a shared step
+ - *tasks* will host your tasks files;
+ - *overlays* will host your patches, like adding a shared step;
 
 ## Tasks
 
-Prepare your tasks, for the example we will use [`golang-test`](https://github.com/tektoncd/catalog/tree/main/task/golang-test/0.2) and [`golangci-lint`](https://github.com/tektoncd/catalog/tree/main/task/golangci-lint/0.2), adjust accordingly.
+Prepare your tasks, for this example, we will use [`golang-test`](https://github.com/tektoncd/catalog/tree/main/task/golang-test/0.2) and [`golangci-lint`](https://github.com/tektoncd/catalog/tree/main/task/golangci-lint/0.2), please adjust accordingly.
 
 ## Snippet
 
@@ -57,7 +57,7 @@ spec:
   - name: format
     default: golint
     description: Format of error input from the task
-  # reviewdog supports a number of reporter types
+  # reviewdog supports many reporter types
   - name: reporter
     default: local
     description: Reporter type for reviewdog https://github.com/reviewdog/reviewdog#reporters
@@ -90,7 +90,7 @@ spec:
 
 ## Patch
 
-With above snippet, it is time to create our patch. I've tried using the snippet directly using `patch` but was not successful, so I decided to create a [`JSON6902 patch`](https://kubectl.docs.kubernetes.io/references/kustomize/glossary/#patchjson6902):
+With the above snippet, it is time to create our patch. I've tried using the snippet directly using as a `patch` but was not successful, so I decided to create a [`JSON6902 patch`](https://kubectl.docs.kubernetes.io/references/kustomize/glossary/#patchjson6902):
 
 ```yaml
 # parameters
@@ -161,11 +161,11 @@ patches:
 
 ## More patching
 
-Make sure all `kustomization.yaml` files are setup correctly, and try running `kustomize build overlays`. You should see the `params`, `workspaces` and `params` added.
+Make sure all `kustomization.yaml` files are set up correctly and try running `kustomize build overlays`. You should see the `params`, `workspaces` and `params` added.
 
-*But wait!*, we still need to connect the dots. Without modifying the imported tasks this would still not work.
+*But wait!* we still need to connect the dots. Without modifying the imported tasks this would still not work.
 
-For the `golangci-lint` it is necessary to save the result to a file as given in the parameter `$(params.report-file)`, and change default format for the `$(params.format)` parameter to `golangci-lint`:
+For the `golangci-lint` task, it is necessary to save the result to a file as given in the parameter `$(params.report-file)`, and change the default format for the `$(params.format)` parameter to `golangci-lint`:
 
 ### golangci-lint
 
@@ -180,7 +180,7 @@ For the `golangci-lint` it is necessary to save the result to a file as given in
     golangci-lint run $(params.flags) > $(params.report-file)
 ```
 
-Save the file as `overlays/golangci-lint-patch.yaml` and add it to the `overlays/kustomization.yaml`
+Save the file as `overlays/golangci-lint-patch.yaml` and add it to the `overlays/kustomization.yaml`.
 
 ```yaml
 [...]
@@ -192,7 +192,7 @@ Save the file as `overlays/golangci-lint-patch.yaml` and add it to the `overlays
 
 ### golang-test
 
-Here is the change for `golang-test`, and actually making it do a `golint`:
+Here is the change for the `golang-test` task, and changing it into a `golint`:
 
 ```yaml
 - op: replace
@@ -227,7 +227,7 @@ nameSuffix: -review
 
 ## Testing
 
-Apply your tasks into your `kubernetes cluster` using `kubectl apply -k overlays` or `kustomize build overlays | kubectl apply -f -`
+Apply your tasks into your Kubernetes cluster using `kubectl apply -k overlays` or `kustomize build overlays | kubectl apply -f -`
 
 
 
@@ -245,4 +245,4 @@ The resulting file tree should be something like:
     └── kustomization.yaml
 ```
 
-Enjoy your new `golang-test-review` and `golangci-lint-review`
+Enjoy your new `golang-test-review` and `golangci-lint-review`.
