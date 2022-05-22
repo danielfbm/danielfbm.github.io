@@ -1,17 +1,44 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Tags on danielfbm</title>
     <link>https://danielfbm.github.io/tags/</link>
     <description>Recent content in Tags on danielfbm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Dec 2019 15:52:19 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 11:34:00 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cloud native</title>
+      <link>https://danielfbm.github.io/tags/cloud-native/</link>
+      <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/cloud-native/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>kubernetes</title>
       <link>https://danielfbm.github.io/tags/kubernetes/</link>
-      <pubDate>Sun, 29 Dec 2019 15:52:19 +0800</pubDate>
+      <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
       
       <guid>https://danielfbm.github.io/tags/kubernetes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>kustomize</title>
+      <link>https://danielfbm.github.io/tags/kustomize/</link>
+      <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/kustomize/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>tekton</title>
+      <link>https://danielfbm.github.io/tags/tekton/</link>
+      <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/tags/tekton/</guid>
       <description></description>
     </item>
     

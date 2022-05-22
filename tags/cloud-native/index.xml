@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>cloud native on danielfbm</title>
+    <link>https://danielfbm.github.io/tags/cloud-native/</link>
+    <description>Recent content in cloud native on danielfbm</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 22 May 2022 11:34:00 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/tags/cloud-native/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to reuse steps in Tekton tasks</title>
+      <link>https://danielfbm.github.io/post/kustomize-tekton-task/</link>
+      <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/post/kustomize-tekton-task/</guid>
+      <description>Creating Tekton tasks is real fun! Its similiarities to pod containers, and how it works makes developing and testing super easy. Still, sometimes it is necessary to reuse a steps in multiple tasks, like when using reviewdog.
+In this post we will learn how to do this very easily using kustomize, and the repo danielfbm/tekton-tasks-kustomize has ready to use example.
+Let&amp;rsquo;s say we want two different tasks golang-test and golangci-lint need to add a reviewdog-report step as seen below</description>
+    </item>
+    
+  </channel>
+</rss>

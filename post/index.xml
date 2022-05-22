@@ -1,11 +1,22 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on danielfbm</title>
     <link>https://danielfbm.github.io/post/</link>
     <description>Recent content in Posts on danielfbm</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Sun, 29 Dec 2019 15:52:19 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 11:34:00 +0800</lastBuildDate><atom:link href="https://danielfbm.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to reuse steps in Tekton tasks</title>
+      <link>https://danielfbm.github.io/post/kustomize-tekton-task/</link>
+      <pubDate>Sun, 22 May 2022 11:34:00 +0800</pubDate>
+      
+      <guid>https://danielfbm.github.io/post/kustomize-tekton-task/</guid>
+      <description>Creating Tekton tasks is real fun! Its similiarities to pod containers, and how it works makes developing and testing super easy. Still, sometimes it is necessary to reuse a steps in multiple tasks, like when using reviewdog.
+In this post we will learn how to do this very easily using kustomize, and the repo danielfbm/tekton-tasks-kustomize has ready to use example.
+Let&amp;rsquo;s say we want two different tasks golang-test and golangci-lint need to add a reviewdog-report step as seen below</description>
+    </item>
+    
     <item>
       <title>My First Sonobuoy Contribution</title>
       <link>https://danielfbm.github.io/post/sonobuoy-contribution/</link>
@@ -34,9 +45,7 @@ What is Sonobuoy? According to the website:
       <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
       
       <guid>https://danielfbm.github.io/post/golang-intro/</guid>
-      <description>This is for those interested in the go programming language. This is my take as an introduction on this amazing language
-Honestly there is plenty of resources on the web about golang to fill a lot of content. This post is merely a summary of the things I find most useful and what attracts me the most while programming in go
-TL; DR To install simply download the package for your OS in the golang official download page</description>
+      <description>first post with Hugo website engine</description>
     </item>
     
     <item>
@@ -45,8 +54,7 @@ TL; DR To install simply download the package for your OS in the golang official
       <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
       
       <guid>https://danielfbm.github.io/post/post-task-manager/</guid>
-      <description>In this post we will explore some basic concepts while working with a microservices architecture in a distributed application. If you are not very familiar with microservices and the motivation behind it, you should take a look at this series of posts from NGINX that gives a great introduction on the subject.
-All the concepts are quite simple and although the autor had sugested a few things to get started I will take you through the construction of a simple microservices app that you could deploy anywhere.</description>
+      <description>Task example app architecture</description>
     </item>
     
     <item>
@@ -55,8 +63,7 @@ All the concepts are quite simple and although the autor had sugested a few thin
       <pubDate>Sun, 19 Jun 2016 18:00:00 +0800</pubDate>
       
       <guid>https://danielfbm.github.io/post/new-start/</guid>
-      <description>Introduction Well, let me first introduce myself. My name is Daniel, I am rather happy Brazilian currently living in Beijing, China.
-I am technology fan, and from childhood I started to become very interested in computers and other eletronic gadgets. My working experience is mostly in Software Development. In the beginning it was mostly focused on the .NET platform (from 2004 until 2011) on the Windows environment, later on I started to learn Unix systems, software testing.</description>
+      <description>First post with Hugo and how I built this blog</description>
     </item>
     
   </channel>

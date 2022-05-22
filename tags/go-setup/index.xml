@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>go setup on danielfbm</title>
     <link>https://danielfbm.github.io/tags/go-setup/</link>
@@ -12,9 +12,7 @@
       <pubDate>Tue, 31 Jan 2017 23:00:00 +0800</pubDate>
       
       <guid>https://danielfbm.github.io/post/golang-intro/</guid>
-      <description>This is for those interested in the go programming language. This is my take as an introduction on this amazing language
-Honestly there is plenty of resources on the web about golang to fill a lot of content. This post is merely a summary of the things I find most useful and what attracts me the most while programming in go
-TL; DR To install simply download the package for your OS in the golang official download page</description>
+      <description>first post with Hugo website engine</description>
     </item>
     
   </channel>

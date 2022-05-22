@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>architecture on danielfbm</title>
     <link>https://danielfbm.github.io/tags/architecture/</link>
@@ -12,8 +12,7 @@
       <pubDate>Sun, 21 Aug 2016 20:51:42 +0800</pubDate>
       
       <guid>https://danielfbm.github.io/post/post-task-manager/</guid>
-      <description>In this post we will explore some basic concepts while working with a microservices architecture in a distributed application. If you are not very familiar with microservices and the motivation behind it, you should take a look at this series of posts from NGINX that gives a great introduction on the subject.
-All the concepts are quite simple and although the autor had sugested a few things to get started I will take you through the construction of a simple microservices app that you could deploy anywhere.</description>
+      <description>Task example app architecture</description>
     </item>
     
   </channel>
