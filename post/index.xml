@@ -14,7 +14,7 @@
       <guid>https://danielfbm.github.io/post/kustomize-tekton-task/</guid>
       <description>Creating Tekton tasks is real fun! Its similarities to pod containers, and how it works make developing and testing super easy. Still, sometimes it is necessary to reuse steps in multiple tasks, like when using reviewdog.
 In this post, we will learn how to do this very easily using kustomize, and the repo danielfbm/tekton-tasks-kustomize has a ready-to-use example.
-Let&amp;rsquo;s say we want two different tasks golang-test and golangci-lint need to add a reviewdog-report step as seen below</description>
+Let&amp;rsquo;s say we want two different tasks golang-test and golangci-lint need to add a reviewdog-report step as seen below:</description>
     </item>
     
     <item>
