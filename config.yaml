@@ -9,12 +9,12 @@ buildFuture: false
 buildExpired: false
 enableInlineShortcodes: true
 
-googleAnalytics: UA-123-45
+googleAnalytics: UA-79136377-1
 
 minify:
     disableXML: true
     minifyOutput: true
-  
+
 languages:
     en:
         languageName: "English"
@@ -27,9 +27,9 @@ languages:
                 - name: Tags
                   url: tags/
                   weight: 10
-                - name: Archive
-                  url: archives
-                  weight: 20
+                # - name: Archive
+                #   url: archives
+                #   weight: 20
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
@@ -74,7 +74,7 @@ params:
     # home-info mode
     homeInfoParams:
         Title: "danielfbm ☕"
-        Content: Kubernetes, 🐳 Containers, 🧰 DevOps, 💻 coding, 🛠️ Continuous Integration, 📦 Continuous Delivery, and other interesting topics
+        Content: Kubernetes, 🐳 Containers, 🧰 DevOps, 💻 Coding, 🛠️ Continuous Integration, 📦 Continuous Delivery, and other interesting topics
 
     socialIcons:
         - name: twitter
@@ -86,7 +86,8 @@ params:
 
     analytics:
         google:
-            SiteVerificationTag: "XYZabc"
+            SiteVerificationTag: "RHUvSBGq8ujuqfs1jUHWNrxoQxeRuW5mQ8zz0dmNUEg"
+            # <meta name="google-site-verification" content="RHUvSBGq8ujuqfs1jUHWNrxoQxeRuW5mQ8zz0dmNUEg" />
 
 outputs:
     home:

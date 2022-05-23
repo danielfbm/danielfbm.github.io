@@ -19,7 +19,7 @@ Creating [`Tekton`](https://tekton.dev) tasks is real fun! Its similarities to p
 
 In this post, we will learn how to do this very easily using [`kustomize`](https://kustomize.io), and the repo [`danielfbm/tekton-tasks-kustomize`](https://github.com/danielfbm/tekton-tasks-kustomize) has a ready-to-use example.
 
-Let's say we want two different tasks `golang-test` and `golangci-lint` need to add a `reviewdog-report` step as seen below
+Let's say we want two different tasks `golang-test` and `golangci-lint` need to add a `reviewdog-report` step as seen below:
 
 
 ![tasks](/images/kustomize-tekton-task/tasks-diagram.drawio.png)
