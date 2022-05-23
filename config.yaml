@@ -9,7 +9,7 @@ buildFuture: false
 buildExpired: false
 enableInlineShortcodes: true
 
-googleAnalytics: UA-79136377-1
+googleAnalytics: G-BQW87J5ZX9
 
 minify:
     disableXML: true
@@ -85,8 +85,9 @@ params:
           url: "https://github.com/danielfbm"
 
     analytics:
+        googlesiteVerificationTag: "RHUvSBGq8ujuqfs1jUHWNrxoQxeRuW5mQ8zz0dmNUEg"
         google:
-            SiteVerificationTag: "RHUvSBGq8ujuqfs1jUHWNrxoQxeRuW5mQ8zz0dmNUEg"
+            googlesiteVerificationTag: "RHUvSBGq8ujuqfs1jUHWNrxoQxeRuW5mQ8zz0dmNUEg"
             # <meta name="google-site-verification" content="RHUvSBGq8ujuqfs1jUHWNrxoQxeRuW5mQ8zz0dmNUEg" />
 
 outputs:
