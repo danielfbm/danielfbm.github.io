@@ -13,6 +13,8 @@ tags:
 - cloud native
 - tekton
 - kustomize
+cover:
+  image: "/images/kustomize-tekton-task/tekton-kustomize.png"
 ---
 
 Creating [`Tekton`](https://tekton.dev) tasks is real fun! Its similarities to pod containers, and how it works make developing and testing super easy. Still, sometimes it is necessary to reuse steps in multiple tasks, like when using [`reviewdog`](https://github.com/reviewdog/reviewdog).
