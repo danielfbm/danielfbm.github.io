@@ -36,7 +36,7 @@ Sonobuoy will create Kubernetes RBAC ClusterRole and ClusterRoleBinding but will
       <description>Here is the Official website link and the GitHub repo.
 Update: version v0.17.0 is available
 What is Sonobuoy? According to the website:
- Sonobuoy is a diagnostic tool that makes it easier to understand the state of a Kubernetes cluster by running a set of plugins (including Kubernetes conformance tests) in an accessible and non-destructive manner. It is a customizable, extendable, and cluster-agnostic way to generate clear, informative reports about your cluster.</description>
+Sonobuoy is a diagnostic tool that makes it easier to understand the state of a Kubernetes cluster by running a set of plugins (including Kubernetes conformance tests) in an accessible and non-destructive manner. It is a customizable, extendable, and cluster-agnostic way to generate clear, informative reports about your cluster.</description>
     </item>
     
     <item>
